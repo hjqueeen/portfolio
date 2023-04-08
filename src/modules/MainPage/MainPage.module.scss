@@ -1,0 +1,8 @@
+.header {
+  @apply flex border-0 border-b border-solid h-16 left-0 sticky top-0 w-full z-40 lg:h-20;
+  backdrop-filter: blur(12px);
+  background-color: rgb(155, 96, 9);
+  &-content {
+    @apply flex flex-row justify-between items-center mx-auto w-full max-w-6xl p-2;
+  }
+}
