@@ -9,6 +9,7 @@ type ContentContainerProps = {
   bgColor?: string;
   component: ReactNode;
   heightClass?: string;
+  id?: string;
 };
 
 const ContentContainer = forwardRef((props: ContentContainerProps, ref) => {
@@ -17,6 +18,7 @@ const ContentContainer = forwardRef((props: ContentContainerProps, ref) => {
       component="div"
       className={clsx(styles['main-container'])}
       ref={ref}
+      id={props.id}
       sx={{ backgroundColor: props.bgColor ?? undefined }}
     >
       <Box className={styles['main-content']}>{props.component}</Box>

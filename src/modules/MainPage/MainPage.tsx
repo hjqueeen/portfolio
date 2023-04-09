@@ -7,6 +7,7 @@ import { Box } from '@mui/material';
 import styles from './MainPage.module.scss';
 import ContentContainer from '../../shared/ContentContainer/ContentContainer';
 import TextButton from '../../shared/components/TextButton/TextButton';
+import { Link } from 'react-scroll';
 
 type MainPageProps = {
   bgColor?: string;
@@ -23,7 +24,6 @@ const MainPage = (props: MainPageProps) => {
     ref: React.MutableRefObject<null | HTMLDivElement>
   ) => {
     if (ref.current) {
-      console.log('scroll', ref.current);
       ref.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
@@ -52,9 +52,14 @@ const MainPage = (props: MainPageProps) => {
             <TextButton onClick={() => scrollToTarget(secondScrollRef)}>
               Skills
             </TextButton>
-            <TextButton onClick={() => scrollToTarget(thirdScrollRef)}>
-              Archiving
-            </TextButton>
+            <Link to="/chapter3" spy={true} smooth={true}>
+              <TextButton
+              // onClick={() => scrollToTarget(thirdScrollRef)}
+              >
+                Archiving
+              </TextButton>
+            </Link>
+
             <TextButton onClick={() => scrollToTarget(fourthScrollRef)}>
               Projects
             </TextButton>
@@ -64,7 +69,6 @@ const MainPage = (props: MainPageProps) => {
           </Box>
         </Box>
       </Box>
-
       {/* Main Content */}
       <Box className="h-full">
         <ContentContainer
@@ -81,6 +85,7 @@ const MainPage = (props: MainPageProps) => {
           component={<Box>CHPATER 3 </Box>}
           bgColor="gray"
           ref={thirdScrollRef}
+          id="/chater3"
         />
         <ContentContainer
           component={<Box>CHPATER 4 </Box>}
