@@ -1,0 +1,26 @@
+.header {
+  @apply flex flex-col border-0 h-12 left-0 sticky top-0 w-full z-40 lg:h-16 bg-white opacity-100;
+
+  &-content {
+    @apply flex flex-row justify-between items-center mx-auto w-full max-w-6xl p-2;
+  }
+}
+
+.header-title:hover {
+  transform: translate(0, -2px);
+  transition: all 0.1s ease-in-out;
+}
+
+.header-title:hover:after {
+  transition: all 0.1s ease-in-out;
+  transform: translate(0, 2px);
+}
+
+.header-title:hover:before {
+  transition: all 0.1s ease-in-out;
+  transform: translate(0, 2px);
+}
+
+.background {
+  @apply absolute object-scale-down object-top w-full h-full opacity-70 -z-50;
+}

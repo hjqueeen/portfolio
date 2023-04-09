@@ -3,12 +3,20 @@ import './App.scss';
 
 // Components
 import AppRouter from './router/AppRouter';
+import { ThemeProvider } from '@mui/material';
+
+// Hooks
+import { useTheme } from './shared/hooks/use-theme.hook';
 
 function App() {
+  const { activeThemeGet } = useTheme();
+
   return (
-    <BrowserRouter>
-      <AppRouter />
-    </BrowserRouter>
+    <ThemeProvider theme={activeThemeGet()}>
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

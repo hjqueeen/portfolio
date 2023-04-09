@@ -1,0 +1,8 @@
+.scroll {
+  &-container {
+    @apply flex w-full h-96;
+  }
+  &-content {
+    @apply w-full mx-auto max-w-6xl p-2;
+  }
+}

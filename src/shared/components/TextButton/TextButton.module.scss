@@ -1,0 +1,18 @@
+// .textbutton {
+//   @apply px-3;
+// }
+
+.textbutton:hover {
+  transform: translate(0, -2px);
+  transition: all 0.1s ease-in-out;
+}
+
+.textbutton:hover:after {
+  transition: all 0.1s ease-in-out;
+  transform: translate(0, 2px);
+}
+
+.textbutton:hover:before {
+  transition: all 0.1s ease-in-out;
+  transform: translate(0, 2px);
+}
