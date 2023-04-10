@@ -1,0 +1,24 @@
+.text-card {
+  @apply rounded-xl shadow-xl p-6 mx-8 mt-10 mb-4;
+  &-title {
+    @apply text-2xl italic underline underline-offset-2;
+  }
+  &-image {
+    @apply rounded-lg mt-4;
+  }
+}
+
+.text-card:hover {
+  transform: translate(0, 5px);
+  transition: all 0.1s ease-in-out;
+}
+
+.text-card:hover:after {
+  transition: all 0.1s ease-in-out;
+  transform: translate(0, -5px);
+}
+
+.text-card:hover:before {
+  transition: all 0.1s ease-in-out;
+  transform: translate(0, -5px);
+}

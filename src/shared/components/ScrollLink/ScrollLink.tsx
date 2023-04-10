@@ -1,8 +1,11 @@
 import { Link } from 'react-scroll';
+import { DefaultTFuncReturn } from 'i18next';
+
+// Components
 import TextButton from '../TextButton/TextButton';
 
 type ScrollLinkProps = {
-  children: string;
+  children: DefaultTFuncReturn | string;
   to: string;
 };
 const ScrollLink = (props: ScrollLinkProps) => {

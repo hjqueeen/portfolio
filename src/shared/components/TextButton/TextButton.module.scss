@@ -1,6 +1,7 @@
-// .textbutton {
-//   @apply px-3;
-// }
+.textbutton {
+  border-radius: 0.75rem !important;
+  margin: 0.5rem;
+}
 
 .textbutton:hover {
   transform: translate(0, -2px);

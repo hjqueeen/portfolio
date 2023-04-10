@@ -1,3 +1,4 @@
+//Components
 import ScrollContainer from '../../shared/components/ScrollContainer/ScrollContainer';
 
 type CareerProps = {

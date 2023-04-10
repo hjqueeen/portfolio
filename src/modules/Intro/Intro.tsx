@@ -1,25 +1,45 @@
-import { Box, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
+import { Box } from '@mui/material';
+// Assets
+import bakgroundImg from '../../assets/bakgroundImg.png';
+
+// Components
 import ScrollContainer from '../../shared/components/ScrollContainer/ScrollContainer';
-import Card from '../../shared/components/Card/Card';
 import ContentContainer from '../../shared/components/ContentContainer/ContentContainer';
 import TextButton from '../../shared/components/TextButton/TextButton';
+
+// Styles
+import styles from './Intro.module.scss';
 
 type IntroProps = {
   scrollTo: string;
 };
 const Intro = (props: IntroProps) => {
+  const { t } = useTranslation();
   return (
-    <ScrollContainer name={props.scrollTo}>
-      <ContentContainer
-        title="Hyejin Kim"
-        subtitle="Web Developer Portfolio"
-        disableIcon
-      >
-        <TextButton size="medium" preset="pink">
-          Learn more
-        </TextButton>
-      </ContentContainer>
-    </ScrollContainer>
+    <Box className="relative">
+      <Box className="absolute w-full h-50">
+        <img
+          src={bakgroundImg}
+          alt="bakgroundImg"
+          className={styles['background']}
+        />
+      </Box>
+      <ScrollContainer name={props.scrollTo}>
+        <ContentContainer
+          title={t('app.intro.title')}
+          subtitle={t('app.intro.subtitle')}
+          disableIcon
+          disableTitleUnderline
+        >
+          <Box className={styles['intro-text-button']}>
+            <TextButton size="medium" preset="pink">
+              Learn more
+            </TextButton>
+          </Box>
+        </ContentContainer>
+      </ScrollContainer>
+    </Box>
   );
 };
 

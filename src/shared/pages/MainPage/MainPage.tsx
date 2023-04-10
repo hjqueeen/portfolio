@@ -1,7 +1,5 @@
 import { Box } from '@mui/material';
-
-// Assets
-import bakgroundImg from '../../../assets/bakgroundImg.png';
+import { Link } from 'react-scroll';
 
 // Components
 import Intro from '../../../modules/Intro/Intro';
@@ -22,11 +20,6 @@ type MainPageProps = {
 const MainPage = (props: MainPageProps) => {
   return (
     <Box className="relative">
-      <img
-        src={bakgroundImg}
-        alt="bakgroundImg"
-        className={styles['background']}
-      />
       {/* Header */}
       <Box className={styles['header']}>
         <Box className={styles['header-content']}>
@@ -36,14 +29,14 @@ const MainPage = (props: MainPageProps) => {
               color: 'pink.dark',
               fontSize: '1.75rem',
               fontWeight: '600',
-              // fontFamily: 'OCR A',
-              // '&:hover': {
-              //   color: 'gray.light',
-              // },
+              fontFamily: 'Montserrat',
             }}
           >
-            HJK's Portfolio
+            <Link to="intro" spy={true} offset={-100}>
+              HJK's Portfolio
+            </Link>
           </Box>
+
           <Box className="flex flex-row items-center">
             <ScrollLink to="introduction">About me</ScrollLink>
             <ScrollLink to="skill">Skills</ScrollLink>

@@ -1,11 +1,14 @@
-import { Box, Button, SxProps, Theme } from '@mui/material';
 import { useEffect, useState } from 'react';
+import { SxProps, Theme } from '@mui/material';
+import Button from '@mui/material/Button';
+import { DefaultTFuncReturn } from 'i18next';
 import clsx from 'clsx';
 
+// Styles
 import styles from './TextButton.module.scss';
 
 type TextButtonProps = {
-  children: string;
+  children: DefaultTFuncReturn | string;
   classes?: string;
   preset?: 'primary' | 'pink';
   size?: 'small' | 'medium' | 'large';
@@ -13,65 +16,65 @@ type TextButtonProps = {
 };
 
 const TextButton = (props: TextButtonProps) => {
-  const [sxPreset, setSxPreset] = useState<SxProps<Theme> | undefined>(
-    undefined
-  );
   const [sx, setSx] = useState<SxProps<Theme> | undefined>(undefined);
-  const [padding, setPadding] = useState<string>('');
 
   useEffect(() => {
+    let sxPreset;
+    let sxSize;
+
     if (props.preset) {
       switch (props.preset) {
         case 'primary':
-          setSxPreset({ color: 'gray' });
+          sxPreset = { color: 'gray' };
           break;
         case 'pink':
-          setSxPreset({
+          sxPreset = {
             color: 'white',
             bgcolor: '#CE5663',
             '&:hover': {
               color: 'white',
               bgcolor: '#CE5663',
             },
-          });
+          };
           break;
         default:
-          setSxPreset({ color: 'gray.dark', fontFamily: 'OCR A' });
       }
+    } else {
+      sxPreset = { color: 'gray_.dark', fontFamily: 'OCR A' };
     }
-  }, [props]);
 
-  useEffect(() => {
     if (props.size) {
       switch (props.size) {
         case 'small':
-          setSx({ ...sxPreset, fontSize: 'small' });
-          setPadding('px-3');
+          sxSize = { fontSize: 'small', padding: '5px 10px' };
+
           break;
         case 'medium':
-          setSx({ ...sxPreset, fontSize: 'medium' });
-          setPadding('p-6 px-9');
+          sxSize = { fontSize: 'medium', padding: '10px 25px' };
+
           break;
         case 'large':
-          setSx({ ...sxPreset, fontSize: 'large' });
-          setPadding('p-9 px-12');
+          sxSize = { fontSize: '30px', padding: '15px 30px' };
+
           break;
         default:
-          setSx({ ...sxPreset });
+          sxSize = { ...sxPreset };
       }
+    } else {
+      sxSize = { fontSize: 'small', padding: '3px 6px' };
     }
+    setSx({ ...sxSize, ...sxPreset });
   }, [props]);
 
   return (
-    // <Box className="flex m-1">
     <Button
       className={clsx(styles['textbutton'], props.classes)}
+      variant="text"
       sx={{ ...sx }}
       onClick={props.onClick}
     >
       {props.children}
     </Button>
-    // </Box>
   );
 };
 

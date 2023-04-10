@@ -1,16 +1,18 @@
-import { Box, Divider, Typography } from '@mui/material';
+import { Box } from '@mui/material';
+import { DefaultTFuncReturn } from 'i18next';
 import { ReactNode } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 
+// Styles
 import styles from './ContentContainer.module.scss';
-import { findIconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 type ContentContainerProps = {
   children: ReactNode;
   disableIcon?: boolean;
-  title: string;
-  subtitle: string;
+  disableTitleUnderline?: boolean;
+  title: string | DefaultTFuncReturn;
+  subtitle?: string | DefaultTFuncReturn;
 };
 
 const ContentContainer = (props: ContentContainerProps) => {
@@ -21,15 +23,23 @@ const ContentContainer = (props: ContentContainerProps) => {
           <FontAwesomeIcon
             className={styles['content-container-icon']}
             icon={faLink}
-            style={{ color: '#5B6A7B', fontSize: 'medium' }}
+            style={{ color: '#5B6A7B', fontSize: 'large' }}
           />
         )}
         <Box
           className={styles['content-container-title-text']}
           component="h1"
           sx={{
-            // fontFamily: 'OCR A',
-            color: 'gray.dark',
+            fontFamily: 'Montserrat',
+            color: 'gray_.dark',
+            textDecoration: !props.disableTitleUnderline
+              ? 'underline'
+              : undefined,
+            textUnderlineOffset: !props.disableTitleUnderline
+              ? '15px'
+              : undefined,
+            textDecorationColor: '#5B6A7B',
+            textDecorationThickness: '1px',
           }}
         >
           {props.title}
@@ -38,14 +48,17 @@ const ContentContainer = (props: ContentContainerProps) => {
       <Box
         className={styles['content-container-subtitle']}
         component="h2"
-        sx={{ fontFamily: 'OCR A', color: 'gray.dark' }}
+        sx={{
+          fontFamily: 'OCR A',
+          color: 'gray_.dark',
+        }}
       >
         {props.subtitle}
       </Box>
-      <Box
-        sx={{ borderColor: 'pink.medium' }}
+      {/* <Box
+        sx={{ borderColor: 'gray_.dark' }}
         className={styles['content-container-divider']}
-      ></Box>
+      ></Box> */}
       {props.children}
     </Box>
   );

@@ -9,6 +9,7 @@ import styles from './ScrollContainer.module.scss';
 type ScrollContainerProps = {
   bgColor?: string;
   children: ReactNode;
+  classes?: string;
   heightClass?: string;
   name: string;
 };
@@ -19,7 +20,7 @@ const ScrollContainer = (props: ScrollContainerProps) => {
       <Element name={props.name}>
         <Box
           component="div"
-          className={clsx(styles['scroll-container'])}
+          className={clsx(styles['scroll-container'], props.classes)}
           sx={{ backgroundColor: props.bgColor ?? undefined }}
         >
           <Box className={styles['scroll-content']}>{props.children}</Box>

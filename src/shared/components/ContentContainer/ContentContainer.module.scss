@@ -1,5 +1,5 @@
 .content-container {
-  @apply w-full flex flex-col items-center p-5;
+  @apply w-full flex flex-col items-center p-10 z-50;
   &-title {
     @apply flex flex-row items-center;
     &-text {
@@ -10,7 +10,7 @@
     @apply ml-2 text-2xl font-normal;
   }
   &-icon {
-    color: 'gray.light';
+    color: 'gray_.light';
   }
   &-divider {
     @apply w-20 mt-3 border-0 border-b-2 border-solid;

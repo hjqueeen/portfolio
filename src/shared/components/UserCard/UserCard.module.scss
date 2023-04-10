@@ -1,0 +1,10 @@
+.user-card {
+  @apply flex flex-row items-center w-full;
+
+  &-content {
+    @apply ml-6;
+    &-title {
+      @apply font-medium text-xl;
+    }
+  }
+}

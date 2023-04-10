@@ -19,7 +19,7 @@ declare module '@mui/material/styles' {
     yellow: {
       light: string;
     };
-    gray: {
+    gray_: {
       light: string;
       dark: string;
     };
@@ -42,7 +42,7 @@ const breakpoints = {
 const pink = {
   light: '#F3E9EA',
   medium: '#CE5663',
-  // dark: '#CE5663',
+  medium_light: '#DD8EA4',
   dark: '#C43040',
 };
 
@@ -51,7 +51,7 @@ const yellow = {
   dark: '#FFA407',
 };
 
-const gray = {
+const gray_ = {
   light: '#5B6A7B',
   dark: '#303841',
 };
@@ -66,13 +66,13 @@ const typography = {
 
 export const themeDark = createTheme({
   breakpoints,
-  palette: { pink, yellow, gray },
+  palette: { pink, yellow, gray_ },
   typography,
 });
 
 export const themeLight = createTheme({
   breakpoints,
-  palette: { pink, yellow, gray },
+  palette: { pink, yellow, gray_ },
   typography,
 });
 
