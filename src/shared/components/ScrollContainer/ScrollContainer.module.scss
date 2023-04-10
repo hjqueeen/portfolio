@@ -6,3 +6,7 @@
     @apply w-full mx-auto max-w-6xl p-2;
   }
 }
+
+.background {
+  @apply absolute object-scale-down object-top w-full h-full opacity-70 -z-40;
+}

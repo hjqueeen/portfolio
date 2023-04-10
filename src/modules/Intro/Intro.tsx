@@ -18,14 +18,7 @@ const Intro = (props: IntroProps) => {
   const { t } = useTranslation();
   return (
     <Box className="relative">
-      <Box className="absolute w-full h-50">
-        <img
-          src={bakgroundImg}
-          alt="bakgroundImg"
-          className={styles['background']}
-        />
-      </Box>
-      <ScrollContainer name={props.scrollTo}>
+      <ScrollContainer name={props.scrollTo} bgImage={bakgroundImg}>
         <ContentContainer
           title={t('app.intro.title')}
           subtitle={t('app.intro.subtitle')}
