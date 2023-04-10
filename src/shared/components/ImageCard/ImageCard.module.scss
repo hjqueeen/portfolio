@@ -1,10 +1,10 @@
 .img-card {
-  @apply rounded-xl shadow-xl p-6 mx-8 mt-10 mb-4;
+  @apply rounded-xl shadow-xl p-4 px-8 mx-8 mt-10 mb-4;
   &-title {
     @apply text-2xl italic underline underline-offset-2;
   }
   &-image {
-    @apply rounded-lg mt-4;
+    @apply rounded-lg mt-4 w-1/2;
   }
 }
 

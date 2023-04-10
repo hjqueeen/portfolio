@@ -4,7 +4,8 @@ import ScrollContainer from '../../shared/components/ScrollContainer/ScrollConta
 import ContentContainer from '../../shared/components/ContentContainer/ContentContainer';
 
 // Assets
-import spring from '../../assets/3spring.png';
+import github from '../../assets/GitHub_Logo.png';
+import velog from '../../assets/velog.png';
 
 // Styles
 import styles from './Archive.module.scss';
@@ -17,28 +18,36 @@ type ArchiveProps = {
 
 const Archive = (props: ArchiveProps) => {
   const { t } = useTranslation();
+  const archive_item = [
+    {
+      titleImg: github,
+      address: t('app.archive.github.address'),
+      datail: t('app.archive.github.description.detail'),
+      text1: t('app.archive.github.description.text1'),
+      text2: t('app.archive.github.description.text2'),
+    },
+    {
+      titleImg: velog,
+      address: t('app.archive.website.address'),
+      datail: t('app.archive.website.description.detail'),
+      text1: t('app.archive.website.description.text1'),
+      text2: t('app.archive.website.description.text2'),
+    },
+  ];
   return (
     <ScrollContainer name={props.scrollTo}>
       <ContentContainer title={t('app.archive.title')}>
         <Box className={styles['archive']}>
-          <ImageCard titleImg={spring} titleImgAlt="image_github">
-            <Box className={styles['']}>
-              <Box className={styles['']}>{t('app.archive.title')}</Box>
-              <Box className={styles['']}> </Box>
-              <Box className={styles['']}> </Box>
-              <Box className={styles['']}> </Box>
-              <Box className={styles['']}> </Box>
-            </Box>
-          </ImageCard>
-          <ImageCard titleImg={spring} titleImgAlt="image_github">
-            <Box className={styles['']}>
-              <Box className={styles['']}>{t('app.archive.title')}</Box>
-              <Box className={styles['']}> </Box>
-              <Box className={styles['']}> </Box>
-              <Box className={styles['']}> </Box>
-              <Box className={styles['']}> </Box>
-            </Box>
-          </ImageCard>
+          {archive_item.map((item) => (
+            <ImageCard titleImg={item.titleImg} titleImgAlt="image_github">
+              <Box className={styles['archive-address']}>{item.address}</Box>
+              <Box className={styles['archive-detail']}>{item.datail}</Box>
+              <ul className={styles['archive-detail-ul']}>
+                <li className={styles['archive-detail-li']}>{item.text1}</li>
+                <li className={styles['archive-detail-li']}>{item.text2}</li>
+              </ul>
+            </ImageCard>
+          ))}
         </Box>
       </ContentContainer>
     </ScrollContainer>

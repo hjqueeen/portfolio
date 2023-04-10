@@ -1,3 +1,6 @@
 .skill {
-  @apply flex flex-row w-full;
+  @apply flex flex-col w-full;
+  &-masonry {
+    @apply py-3;
+  }
 }

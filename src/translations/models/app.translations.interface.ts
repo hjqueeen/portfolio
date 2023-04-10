@@ -24,8 +24,8 @@ export interface AppTranslations {
   };
   archive: {
     title: string;
-    githup: {
-      adress: string;
+    github: {
+      address: string;
       description: {
         detail: string;
         text1: string;
@@ -34,7 +34,7 @@ export interface AppTranslations {
       };
     };
     website: {
-      adress: string;
+      address: string;
       description: {
         detail: string;
         text1: string;

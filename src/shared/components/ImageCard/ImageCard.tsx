@@ -12,7 +12,7 @@ type ImageCardProps = {
 
 export const ImageCard = (props: ImageCardProps) => {
   return (
-    <Box className={styles['img-card']} sx={{ bgcolor: 'pink.medium_light' }}>
+    <Box className={styles['img-card']} sx={{ bgcolor: 'pink.light' }}>
       <Box className={styles['img-card-title']}>
         <img
           className={styles['img-card-image']}

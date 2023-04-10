@@ -27,21 +27,21 @@ export const appTranslationsEN: AppTranslations = {
   },
   archive: {
     title: 'ARCHIVING',
-    githup: {
-      adress: '',
+    github: {
+      address: 'https://github.com/hjqueeen',
       description: {
-        detail: '',
-        text1: '',
-        text2: '',
+        detail: 'This is a source code repository.',
+        text1: 'Source code for a personal project',
+        text2: 'Code practiced while learning the programming language',
         text3: '',
       },
     },
     website: {
-      adress: '',
+      address: 'https://velog.io/@hjqueeen',
       description: {
-        detail: '',
-        text1: '',
-        text2: '',
+        detail: 'This blog is for study and knowledge sharing purposes.',
+        text1: 'Records to make what I studied truly my own',
+        text2: 'Collection of programming knowledge learned as a developer',
         text3: '',
       },
     },

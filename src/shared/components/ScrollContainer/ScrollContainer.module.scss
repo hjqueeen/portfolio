@@ -8,5 +8,5 @@
 }
 
 .background {
-  @apply absolute object-scale-down object-top w-full h-full opacity-70 -z-40;
+  @apply absolute object-none object-top w-full h-full opacity-70 -z-40 bg-clip-padding;
 }

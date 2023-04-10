@@ -15,13 +15,11 @@ export const TextCard = (props: TextCardProps) => {
       <Box className={styles['text-card-title']} sx={{ color: 'yellow.dark' }}>
         {props.title}
       </Box>
-      <Box>
-        <img
-          className={styles['text-card-image']}
-          src={props.img}
-          alt={props.imgAlt}
-        />
-      </Box>
+      <img
+        className={styles['text-card-image']}
+        src={props.img}
+        alt={props.imgAlt}
+      />
     </Box>
   );
 };

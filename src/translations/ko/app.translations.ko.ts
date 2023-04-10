@@ -26,21 +26,21 @@ export const appTranslationsKO: AppTranslations = {
   },
   archive: {
     title: 'ARCHIVING',
-    githup: {
-      adress: '',
+    github: {
+      address: 'https://github.com/hjqueeen',
       description: {
         detail: '소스 코드 저장소입니다.',
-        text1: '',
-        text2: '',
+        text1: '개인 프로젝트 소스코드',
+        text2: '프로그래밍 언어를 배우면서 연습한 코드 ',
         text3: '',
       },
     },
     website: {
-      adress: '',
+      address: 'https://velog.io/@hjqueeen',
       description: {
-        detail: '공부 및 지식 공유목적의 블로그입니다.',
-        text1: '',
-        text2: '',
+        detail: '연구 및 지식 공유를 위한 블로그입니다.',
+        text1: '공부한 것을 내 것으로 만들기 위한 기록',
+        text2: '개발자로서 배운 프로그래밍 관련 지식 모음',
         text3: '',
       },
     },

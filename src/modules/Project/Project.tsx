@@ -6,7 +6,7 @@ type ProjectProps = {
 
 const Project = (props: ProjectProps) => {
   return (
-    <ScrollContainer name={props.scrollTo} bgColor="pink.light">
+    <ScrollContainer name={props.scrollTo} bgColor="yellow.light">
       <div>Project</div>
     </ScrollContainer>
   );

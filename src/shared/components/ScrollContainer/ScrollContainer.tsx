@@ -20,13 +20,15 @@ const ScrollContainer = (props: ScrollContainerProps) => {
     <>
       <Element name={props.name}>
         <Box className="relative">
-          <Box className="absolute w-full h-50 ">
-            <img
-              src={props.bgImage}
-              alt="bakgroundImg"
-              className={styles['background']}
-            />
-          </Box>
+          {props.bgImage && (
+            <Box className="absolute w-full h-50 ">
+              <img
+                src={props.bgImage}
+                alt="bakgroundImg"
+                className={styles['background']}
+              />
+            </Box>
+          )}
           <Box
             component="div"
             className={clsx(styles['scroll-container'], props.classes)}
