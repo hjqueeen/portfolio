@@ -15,25 +15,34 @@ type TextButtonProps = {
   onClick?: () => void;
 };
 
-const TextButton = (props: TextButtonProps) => {
+export const TextButton = (props: TextButtonProps) => {
   const [sx, setSx] = useState<SxProps<Theme> | undefined>(undefined);
+  console.log('sx', sx);
 
   useEffect(() => {
-    let sxPreset;
-    let sxSize;
+    let sxPreset: SxProps<Theme> = {};
+    let sxSize: SxProps<Theme> = {};
 
     if (props.preset) {
       switch (props.preset) {
         case 'primary':
-          sxPreset = { color: 'gray' };
+          sxPreset = {
+            color: 'white',
+            bgColor: '#010101',
+            '&:hover': {
+              color: 'white',
+              bgColor: '#010101',
+            },
+          };
           break;
         case 'pink':
           sxPreset = {
             color: 'white',
-            bgcolor: '#CE5663',
+            bgcolor: 'app.purple',
+            border: 'white 2px solid',
             '&:hover': {
-              color: 'white',
-              bgcolor: '#CE5663',
+              color: 'app.purple',
+              bgcolor: 'white',
             },
           };
           break;
@@ -58,13 +67,12 @@ const TextButton = (props: TextButtonProps) => {
 
           break;
         default:
-          sxSize = { ...sxPreset };
       }
     } else {
       sxSize = { fontSize: 'small', padding: '3px 6px' };
     }
     setSx({ ...sxSize, ...sxPreset });
-  }, [props]);
+  }, [props.preset, props.size]);
 
   return (
     <Button
@@ -77,5 +85,3 @@ const TextButton = (props: TextButtonProps) => {
     </Button>
   );
 };
-
-export default TextButton;

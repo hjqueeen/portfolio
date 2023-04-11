@@ -11,11 +11,13 @@ type ContentContainerProps = {
   children: ReactNode;
   disableIcon?: boolean;
   disableTitleUnderline?: boolean;
+  textColor?: string;
   title: string | DefaultTFuncReturn;
+
   subtitle?: string | DefaultTFuncReturn;
 };
 
-const ContentContainer = (props: ContentContainerProps) => {
+export const ContentContainer = (props: ContentContainerProps) => {
   return (
     <Box className={styles['content-container']}>
       <Box className={styles['content-container-title']}>
@@ -31,7 +33,7 @@ const ContentContainer = (props: ContentContainerProps) => {
           component="h1"
           sx={{
             fontFamily: 'Montserrat',
-            color: 'gray_.dark',
+            color: props.textColor ? props.textColor : 'gray_.dark',
             textDecoration: !props.disableTitleUnderline
               ? 'underline'
               : undefined,
@@ -50,7 +52,7 @@ const ContentContainer = (props: ContentContainerProps) => {
         component="h2"
         sx={{
           fontFamily: 'OCR A',
-          color: 'gray_.dark',
+          color: props.textColor ? props.textColor : 'gray_.dark',
         }}
       >
         {props.subtitle}
@@ -63,5 +65,3 @@ const ContentContainer = (props: ContentContainerProps) => {
     </Box>
   );
 };
-
-export default ContentContainer;

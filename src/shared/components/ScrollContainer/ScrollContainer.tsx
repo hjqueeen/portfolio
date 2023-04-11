@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { Box } from '@mui/material';
 import { Element } from 'react-scroll';
 import clsx from 'clsx';
+import bgimg from '../../../assets/bakgroundImg.png';
 
 // Styles
 import styles from './ScrollContainer.module.scss';
@@ -15,13 +16,13 @@ type ScrollContainerProps = {
   name: string;
 };
 
-const ScrollContainer = (props: ScrollContainerProps) => {
+export const ScrollContainer = (props: ScrollContainerProps) => {
   return (
     <>
       <Element name={props.name}>
-        <Box className="relative">
+        <Box className={styles['scroll-container-background']}>
           {props.bgImage && (
-            <Box className="absolute w-full h-50 ">
+            <Box className={styles['scroll-container-background']}>
               <img
                 src={props.bgImage}
                 alt="bakgroundImg"
@@ -41,5 +42,3 @@ const ScrollContainer = (props: ScrollContainerProps) => {
     </>
   );
 };
-
-export default ScrollContainer;

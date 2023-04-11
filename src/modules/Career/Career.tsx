@@ -1,5 +1,5 @@
 //Components
-import ScrollContainer from '../../shared/components/ScrollContainer/ScrollContainer';
+import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';
 
 type CareerProps = {
   scrollTo: string;

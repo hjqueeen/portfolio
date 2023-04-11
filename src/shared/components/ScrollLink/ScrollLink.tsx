@@ -2,7 +2,7 @@ import { Link } from 'react-scroll';
 import { DefaultTFuncReturn } from 'i18next';
 
 // Components
-import TextButton from '../TextButton/TextButton';
+import { TextButton } from '../TextButton/TextButton';
 
 type ScrollLinkProps = {
   children: DefaultTFuncReturn | string;

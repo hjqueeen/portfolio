@@ -42,7 +42,7 @@ const MainPage = (props: MainPageProps) => {
             <ScrollLink to="skill">Skills</ScrollLink>
             <ScrollLink to="Archive">Archiving</ScrollLink>
             <ScrollLink to="project">Projects</ScrollLink>
-            <ScrollLink to="career">Career</ScrollLink>
+            {/* <ScrollLink to="career">Career</ScrollLink> */}
           </Box>
         </Box>
       </Box>
@@ -56,7 +56,7 @@ const MainPage = (props: MainPageProps) => {
         <Skill scrollTo="skill" />
         <Archive scrollTo="Archive" />
         <Project scrollTo="project" />
-        <Career scrollTo="career" />
+        {/* <Career scrollTo="career" /> */}
       </Box>
     </Box>
   );

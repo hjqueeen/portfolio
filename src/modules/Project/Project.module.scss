@@ -1,0 +1,49 @@
+.project-card {
+  @apply flex flex-col w-full p-5 rounded-xl shadow-xl mt-5;
+  &-header {
+    @apply flex flex-col items-center w-full;
+    &-title {
+      @apply text-3xl font-extrabold my-3;
+    }
+    &-subtitle {
+      @apply text-xl font-semibold mt-3 mb-9;
+    }
+  }
+}
+
+.content {
+  @apply flex flex-row px-6;
+  &-image {
+    @apply w-full max-w-full mr-2 border h-fit;
+    & img {
+      @apply w-full rounded-sm;
+    }
+  }
+  &-main {
+    @apply w-full max-w-full flex flex-col items-start ml-2 pl-4;
+    &-description {
+      @apply w-full;
+      &-text {
+        @apply mb-2 text-lg w-full max-w-full break-words;
+      }
+      &-button {
+        @apply my-2 pr-4 w-full;
+      }
+      &-divider {
+        @apply h-4 border-0 border-b border-solid w-full mt-2 mb-6;
+      }
+      &-list {
+        @apply w-full flex flex-row;
+        &-title {
+          @apply w-1/4 flex flex-row;
+          &-text {
+            @apply px-2 font-bold;
+          }
+        }
+        &-detail {
+          @apply w-3/4 pl-2;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
-import ScrollContainer from '../../shared/components/ScrollContainer/ScrollContainer';
-import ContentContainer from '../../shared/components/ContentContainer/ContentContainer';
+import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';
+import { ContentContainer } from '../../shared/components/ContentContainer/ContentContainer';
 
 // Assets
 import github from '../../assets/GitHub_Logo.png';
@@ -38,8 +38,12 @@ const Archive = (props: ArchiveProps) => {
     <ScrollContainer name={props.scrollTo}>
       <ContentContainer title={t('app.archive.title')}>
         <Box className={styles['archive']}>
-          {archive_item.map((item) => (
-            <ImageCard titleImg={item.titleImg} titleImgAlt="image_github">
+          {archive_item.map((item, index) => (
+            <ImageCard
+              key={index}
+              titleImg={item.titleImg}
+              titleImgAlt="image_github"
+            >
               <Box className={styles['archive-address']}>{item.address}</Box>
               <Box className={styles['archive-detail']}>{item.datail}</Box>
               <ul className={styles['archive-detail-ul']}>

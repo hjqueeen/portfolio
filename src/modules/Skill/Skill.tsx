@@ -8,9 +8,9 @@ import backend from '../../assets/backend.png';
 import communication from '../../assets/communication.png';
 
 // Components
-import ContentContainer from '../../shared/components/ContentContainer/ContentContainer';
-import ScrollContainer from '../../shared/components/ScrollContainer/ScrollContainer';
-import TextButton from '../../shared/components/TextButton/TextButton';
+import { ContentContainer } from '../../shared/components/ContentContainer/ContentContainer';
+import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';
+import { TextButton } from '../../shared/components/TextButton/TextButton';
 
 import styles from './Skill.module.scss';
 import { useTranslation } from 'react-i18next';
@@ -44,13 +44,18 @@ const Skill = (props: SkillProps) => {
           <Box className={styles['skill-masonry']}></Box>
           <Masonry
             columns={{ xs: 1, md: 2, lg: 3 }}
-            spacing={3}
+            spacing={4}
             defaultColumns={3}
             defaultHeight={300}
           >
-            {skillItem.map((item) => {
+            {skillItem.map((item, index) => {
               return (
-                <TextCard title={item.title} img={item.img} imgAlt={item.alt} />
+                <TextCard
+                  key={index}
+                  title={item.title}
+                  img={item.img}
+                  imgAlt={item.alt}
+                />
               );
             })}
           </Masonry>

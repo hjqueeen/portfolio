@@ -12,6 +12,15 @@ declare module '@mui/material/styles' {
     xxxxl: true;
   }
   interface PaletteOptions {
+    app: {
+      pink: string;
+      purple: string;
+      orange: string;
+      gray: {
+        dark: string;
+        light: string;
+      };
+    };
     pink: {
       light: string;
       dark: string;
@@ -36,6 +45,16 @@ const breakpoints = {
     xxl: 1536,
     xxxl: 1920,
     xxxxl: 2560,
+  },
+};
+const app = {
+  pink: '#FF7767',
+  purple: '#6919FF',
+  // purple: '#555FDA',
+  orange: '#FF9E71',
+  gray: {
+    dark: '#444444',
+    light: '#625E79',
   },
 };
 
@@ -66,13 +85,13 @@ const typography = {
 
 export const themeDark = createTheme({
   breakpoints,
-  palette: { pink, yellow, gray_ },
+  palette: { app, pink, yellow, gray_ },
   typography,
 });
 
 export const themeLight = createTheme({
   breakpoints,
-  palette: { pink, yellow, gray_ },
+  palette: { app, pink, yellow, gray_ },
   typography,
 });
 

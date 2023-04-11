@@ -1,19 +1,20 @@
 .textbutton {
-  border-radius: 0.75rem !important;
+  @apply border border-solid;
+  border-radius: 0 !important;
   margin: 0.5rem;
 }
 
-.textbutton:hover {
-  transform: translate(0, -2px);
-  transition: all 0.1s ease-in-out;
-}
+// .textbutton:hover {
+//   transform: translate(0, -2px);
+//   transition: all 0.1s ease-in-out;
+// }
 
-.textbutton:hover:after {
-  transition: all 0.1s ease-in-out;
-  transform: translate(0, 2px);
-}
+// .textbutton:hover:after {
+//   transition: all 0.1s ease-in-out;
+//   transform: translate(0, 2px);
+// }
 
-.textbutton:hover:before {
-  transition: all 0.1s ease-in-out;
-  transform: translate(0, 2px);
-}
+// .textbutton:hover:before {
+//   transition: all 0.1s ease-in-out;
+//   transform: translate(0, 2px);
+// }

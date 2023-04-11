@@ -4,9 +4,9 @@ import { Box } from '@mui/material';
 import bakgroundImg from '../../assets/bakgroundImg.png';
 
 // Components
-import ScrollContainer from '../../shared/components/ScrollContainer/ScrollContainer';
-import ContentContainer from '../../shared/components/ContentContainer/ContentContainer';
-import TextButton from '../../shared/components/TextButton/TextButton';
+import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';
+import { ContentContainer } from '../../shared/components/ContentContainer/ContentContainer';
+import { TextButton } from '../../shared/components/TextButton/TextButton';
 
 // Styles
 import styles from './Intro.module.scss';
@@ -18,8 +18,13 @@ const Intro = (props: IntroProps) => {
   const { t } = useTranslation();
   return (
     <Box className="relative">
-      <ScrollContainer name={props.scrollTo} bgImage={bakgroundImg}>
+      <ScrollContainer
+        name={props.scrollTo}
+        bgColor="app.purple"
+        // bgImage={bakgroundImg}
+      >
         <ContentContainer
+          textColor="white"
           title={t('app.intro.title')}
           subtitle={t('app.intro.subtitle')}
           disableIcon

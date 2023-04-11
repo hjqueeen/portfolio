@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import ContentContainer from '../../shared/components/ContentContainer/ContentContainer';
-import ScrollContainer from '../../shared/components/ScrollContainer/ScrollContainer';
+import { ContentContainer } from '../../shared/components/ContentContainer/ContentContainer';
+import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';
 import {
   IconDefinition,
   faUser,
