@@ -12,7 +12,7 @@ type ImageCardProps = {
 
 export const ImageCard = (props: ImageCardProps) => {
   return (
-    <Box className={styles['img-card']} sx={{ bgcolor: 'pink.light' }}>
+    <Box className={styles['img-card']} sx={{ bgcolor: 'white' }}>
       <Box className={styles['img-card-title']}>
         <img
           className={styles['img-card-image']}
@@ -20,7 +20,7 @@ export const ImageCard = (props: ImageCardProps) => {
           alt={props.titleImgAlt}
         />
       </Box>
-      <Box sx={{ color: 'gray_.dark' }}>{props.children}</Box>
+      <Box sx={{ color: 'app.gray.dark' }}>{props.children}</Box>
     </Box>
   );
 };

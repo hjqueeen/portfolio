@@ -1,5 +1,8 @@
 .content-container {
-  @apply w-full flex flex-col items-center p-10;
+  @apply w-full h-full flex flex-col items-center justify-between p-16;
+  &-header {
+    @apply flex flex-col items-center;
+  }
   &-title {
     @apply flex flex-row items-center;
     &-text {

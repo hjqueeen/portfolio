@@ -18,9 +18,12 @@ export const UserCard = (props: UserCardProps) => {
       <FontAwesomeIcon
         className={styles['user-card-icon']}
         icon={props.icon}
-        style={{ color: '#5B6A7B', fontSize: '30px' }}
+        style={{ color: 'white', fontSize: '30px' }}
       />
-      <Box className={styles['user-card-content']}>
+      <Box
+        className={styles['user-card-content']}
+        sx={{ color: 'app.gray.light' }}
+      >
         <Box className={styles['user-card-content-title']}>{props.title}</Box>
         <Box className={styles['user-card-content-subtitle']}>
           {props.subtitle}

@@ -11,12 +11,13 @@ import { TextButton } from '../../shared/components/TextButton/TextButton';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 // Assets
-import git from '../../assets/frontend.png';
 import spring from '../../assets/3spring.png';
+
+// Models
+import { ProjectType } from '../../shared/models/shared.types';
 
 // Styles
 import styles from './Project.module.scss';
-import { ProjectType } from '../../shared/components/models/shared.type';
 
 type ProjectProps = {
   scrollTo: string;
@@ -28,7 +29,7 @@ const Project = (props: ProjectProps) => {
     {
       title: 'Title 제목',
       subtitle: 'subtitle 설명입니다',
-      img: git,
+      img: spring,
       imgAlt: '',
       descriptions: [
         'hi',
@@ -60,32 +61,14 @@ const Project = (props: ProjectProps) => {
         },
       ],
     },
-    {
-      title: t(''),
-      subtitle: t(''),
-      img: spring,
-      imgAlt: '',
-      descriptions: [t(''), t(''), 'hi', 'hello'],
-      lists: [
-        {
-          title: '주요기능',
-          detail:
-            '자주 부르는 노래의 가수명 및 제목 기록하기, 간편한 분류를 위해 각 노래에 태깅하기, 노래의 가수명 및 제목으로 검색해 보기, 가수 또는 태그에 따라 분류해 보기',
-        },
-        {
-          title: '주요기능',
-          detail: '자주 부르는 노래의 가수명 및 제목 기록하기.',
-        },
-        {
-          title: '주요기능',
-          detail: '자주 부르는 노래의 가수명 및 제목 기록하기.',
-        },
-      ],
-    },
   ];
   return (
-    <ScrollContainer name={props.scrollTo} bgColor="yellow.light">
-      <ContentContainer title={t('app.intro.title')}>
+    <ScrollContainer name={props.scrollTo} bgColor="app.purple" heightFit>
+      <ContentContainer
+        title={t('app.intro.title')}
+        textColor="white"
+        iconColor="white"
+      >
         {project_items.map((item, index) => (
           <Box
             key={index}
@@ -109,7 +92,7 @@ const Project = (props: ProjectProps) => {
             <Box className={styles['content']}>
               <Box className={styles['content-image']}>
                 <img src={item.img} alt={item.imgAlt} />
-              </Box>{' '}
+              </Box>
               <Box className={styles['content-main']}>
                 <Box className={styles['content-main-description']}>
                   {item.descriptions.map((description, index) => (

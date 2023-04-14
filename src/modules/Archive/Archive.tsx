@@ -35,8 +35,12 @@ const Archive = (props: ArchiveProps) => {
     },
   ];
   return (
-    <ScrollContainer name={props.scrollTo}>
-      <ContentContainer title={t('app.archive.title')}>
+    <ScrollContainer name={props.scrollTo} bgColor="black">
+      <ContentContainer
+        title={t('app.archive.title')}
+        textColor="white"
+        iconColor="#625E79"
+      >
         <Box className={styles['archive']}>
           {archive_item.map((item, index) => (
             <ImageCard

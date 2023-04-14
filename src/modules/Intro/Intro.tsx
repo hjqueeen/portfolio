@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Box } from '@mui/material';
 // Assets
-import bakgroundImg from '../../assets/bakgroundImg.png';
+import developer from '../../assets/programmiererin.png';
 
 // Components
 import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';
@@ -30,6 +30,7 @@ const Intro = (props: IntroProps) => {
           disableIcon
           disableTitleUnderline
         >
+          <img src={developer} alt="developer" />
           <Box className={styles['intro-text-button']}>
             <TextButton size="medium" preset="pink">
               Learn more

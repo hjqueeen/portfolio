@@ -26,7 +26,7 @@ const MainPage = (props: MainPageProps) => {
           <Box
             className={styles['header-title']}
             sx={{
-              color: 'pink.dark',
+              color: 'app.pink',
               fontSize: '1.75rem',
               fontWeight: '600',
               fontFamily: 'Montserrat',

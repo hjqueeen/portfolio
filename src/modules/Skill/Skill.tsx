@@ -2,10 +2,10 @@ import { Box } from '@mui/material';
 import { Masonry } from '@mui/lab';
 
 // Assets
-import version_control from '../../assets/version_control.png';
-import frontend from '../../assets/frontend.png';
-import backend from '../../assets/backend.png';
-import communication from '../../assets/communication.png';
+// import version_control from '../../assets/version_control.png';
+// import frontend from '../../assets/frontend.png';
+// import backend from '../../assets/backend.png';
+// import communication from '../../assets/communication.png';
 
 // Components
 import { ContentContainer } from '../../shared/components/ContentContainer/ContentContainer';
@@ -23,23 +23,41 @@ type SkillProps = {
 const Skill = (props: SkillProps) => {
   const { t } = useTranslation();
   const skillItem = [
-    { title: t('app.skill.frontend'), img: frontend, alt: 'skill_frontend' },
-    { title: t('app.skill.backend'), img: backend, alt: 'skill_backend' },
+    {
+      title: t('app.skill.frontend'),
+      skills: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'TypeScript',
+        'Sass',
+        'React',
+        'tailwind',
+        'Mui',
+        'Zustand',
+      ],
+    },
+    {
+      title: t('app.skill.backend'),
+      skills: ['NestJs', 'PostgresSQL', 'TypeOrm'],
+    },
     {
       title: t('app.skill.version_control'),
-      img: version_control,
-      alt: 'skill_version_control',
+      skills: ['git', 'Github', 'GitLab'],
     },
     {
       title: t('app.skill.communication'),
-      img: communication,
-      alt: 'skill_communication',
+      skills: ['Jira Software'],
     },
   ];
 
   return (
-    <ScrollContainer name={props.scrollTo} bgColor="yellow.light">
-      <ContentContainer title={t('app.skill.title')}>
+    <ScrollContainer name={props.scrollTo} bgColor="app.purple">
+      <ContentContainer
+        title={t('app.skill.title')}
+        textColor="white"
+        iconColor="white"
+      >
         <Box className={styles['skill']}>
           <Box className={styles['skill-masonry']}></Box>
           <Masonry
@@ -50,12 +68,7 @@ const Skill = (props: SkillProps) => {
           >
             {skillItem.map((item, index) => {
               return (
-                <TextCard
-                  key={index}
-                  title={item.title}
-                  img={item.img}
-                  imgAlt={item.alt}
-                />
+                <TextCard key={index} title={item.title} skills={item.skills} />
               );
             })}
           </Masonry>
