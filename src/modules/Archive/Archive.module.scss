@@ -1,5 +1,6 @@
 .archive {
-  @apply flex flex-row;
+  @apply flex flex-col text-xs
+  md:flex-row;
   &-address {
     @apply underline;
   }
@@ -7,6 +8,7 @@
     @apply mt-4 mb-2 font-bold;
     &-ul {
       @apply list-disc pl-4;
+
       // list-style-type: disc;
     }
     &-li {

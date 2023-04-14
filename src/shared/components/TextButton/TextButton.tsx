@@ -111,7 +111,8 @@ export const TextButton = (props: TextButtonProps) => {
 type SkillButtonProps = {
   children: DefaultTFuncReturn | string;
   classes?: string;
-  preset?: 'gray' | 'pink' | 'white_puple' | 'purple';
+  preset?: 'gray' | 'pink' | 'white_purple' | 'purple' | 'orange';
+  fontFamily?: 'OCR A';
   size?: 'small' | 'medium' | 'large';
   onClick?: () => void;
 };
@@ -146,6 +147,18 @@ export const SkillButton = (props: SkillButtonProps) => {
             },
           };
           break;
+        case 'orange':
+          sxPreset = {
+            color: 'white',
+            bgcolor: 'app.orange',
+            border: 'white 2px solid',
+            fontFamily: 'OCR A',
+            '&:hover': {
+              color: 'app.orange',
+              bgcolor: 'white',
+            },
+          };
+          break;
         case 'purple':
           sxPreset = {
             color: 'white',
@@ -157,7 +170,7 @@ export const SkillButton = (props: SkillButtonProps) => {
             },
           };
           break;
-        case 'white_puple':
+        case 'white_purple':
           sxPreset = {
             color: 'app.purple',
             bgcolor: 'white',

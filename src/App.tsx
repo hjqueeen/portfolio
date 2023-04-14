@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
 
@@ -11,10 +11,18 @@ import { useTheme } from './shared/hooks/use-theme.hook';
 
 // Utils
 import i18n from './shared/utils/i18n';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+  const { t } = useTranslation();
   const { activeThemeGet } = useTheme();
-  // Set language on account data change. Defaults to 'de'.
+
+  // Set document title on application init
+  useEffect(() => {
+    document.title = t('app.title');
+  }, [t]);
+
+  // Set language on account data change. Defaults to 'en'.
   useEffect(() => {
     // if (window.navigator.language.includes('ko')) {
     //   console.log('ko');
@@ -25,6 +33,34 @@ function App() {
     i18n.changeLanguage('en');
     document.documentElement.setAttribute('lang', 'en');
     // }
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setVhfunction();
+    }, 1000);
+
+    window.addEventListener('resize', () => {
+      setVhfunction();
+    });
+    window.addEventListener('touchend', () => {
+      setVhfunction();
+    });
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        setVhfunction();
+      });
+      window.removeEventListener('touchend', () => {
+        setVhfunction();
+      });
+    };
+  }, []);
+
+  // Set height
+  const setVhfunction = useCallback(() => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
   }, []);
 
   return (

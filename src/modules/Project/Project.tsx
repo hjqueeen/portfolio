@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Components
 import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';
-import { ContentContainer } from '../../shared/components/ContentContainer/ContentContainer';
 import { TextButton } from '../../shared/components/TextButton/TextButton';
 
 // Icons
@@ -18,12 +17,14 @@ import { ProjectType } from '../../shared/models/shared.types';
 
 // Styles
 import styles from './Project.module.scss';
+import { useBreakpoints } from '../../shared/hooks/use-breakpoints.hook';
 
 type ProjectProps = {
   scrollTo: string;
 };
 
 const Project = (props: ProjectProps) => {
+  const { lgDown } = useBreakpoints();
   const { t } = useTranslation();
   const project_items: ProjectType[] = [
     {
@@ -32,13 +33,10 @@ const Project = (props: ProjectProps) => {
       img: spring,
       imgAlt: '',
       descriptions: [
-        'hi',
-        'hello',
         'This is a source code repository.',
         'This is a source code repository.',
         'This is a source code repository.',
         'This is a source code repository.',
-        'This is a source code repositdfepositd fadfagdadeposit dfadfag dade positdfad fagdadeposit dfadfagdadfd agdadfd agdadfd  agdadfd agdadfd agd adadf agdadfd dfadfadf s is ',
         'This is a source code repository.',
       ],
       lists: [
@@ -63,95 +61,138 @@ const Project = (props: ProjectProps) => {
     },
   ];
   return (
-    <ScrollContainer name={props.scrollTo} bgColor="app.purple" heightFit>
-      <ContentContainer
-        title={t('app.intro.title')}
-        textColor="white"
-        iconColor="white"
-      >
-        {project_items.map((item, index) => (
-          <Box
-            key={index}
-            className={styles['project-card']}
-            sx={{ bgcolor: 'white' }}
-          >
-            <Box className={styles['project-card-header']}>
-              <Box
-                className={styles['project-card-header-title']}
-                sx={{ fontFamily: 'Montserrat' }}
-              >
-                {item.title}
-              </Box>
-              <Box
-                className={styles['project-card-header-subtitle']}
-                sx={{ color: 'gray_.light' }}
-              >
-                {item.subtitle}
-              </Box>
+    <ScrollContainer
+      name={props.scrollTo}
+      bgColor="app.purple"
+      heightFit
+      title={t('app.intro.title')}
+      textColor="white"
+      iconColor="white"
+    >
+      {project_items.map((item, index) => (
+        <Box
+          key={index}
+          className={styles['project-card']}
+          sx={{ bgcolor: 'white' }}
+        >
+          <Box className={styles['project-card-header']}>
+            <Box
+              className={styles['project-card-header-title']}
+              sx={{
+                fontFamily: 'Montserrat',
+                '::selection': {
+                  color: 'white',
+                  bgcolor: 'app.orange',
+                },
+              }}
+            >
+              {item.title}
             </Box>
-            <Box className={styles['content']}>
-              <Box className={styles['content-image']}>
-                <img src={item.img} alt={item.imgAlt} />
-              </Box>
-              <Box className={styles['content-main']}>
-                <Box className={styles['content-main-description']}>
-                  {item.descriptions.map((description, index) => (
-                    <Box
-                      key={index}
-                      className={styles['content-main-description-text']}
-                    >
-                      {description}
-                    </Box>
-                  ))}
-                </Box>
-                <Box className={styles['content-main-description-button']}>
-                  <TextButton preset="pink" size="medium">
-                    Learn more
-                  </TextButton>
-                  <Box
-                    className={styles['content-main-description-divider']}
-                    sx={{ borderColor: 'gray_.dark' }}
-                  ></Box>
-                  {item.lists.map((list, index) => (
-                    <Box
-                      key={index}
-                      className={styles['content-main-description-list']}
-                    >
-                      <Box
-                        className={
-                          styles['content-main-description-list-title']
-                        }
-                      >
-                        <FontAwesomeIcon
-                          icon={faCheck}
-                          style={{ color: '#5B6A7B', fontSize: 'large' }}
-                        />
-                        <Box
-                          className={
-                            styles['content-main-description-list-title-text']
-                          }
-                        >
-                          {list.title}
-                        </Box>
-                      </Box>
-                      <Box
-                        className={
-                          styles['content-main-description-list-detail']
-                        }
-                      >
-                        {list.detail}
-                      </Box>
-                    </Box>
-                  ))}
-                </Box>
-              </Box>
+            <Box
+              className={styles['project-card-header-subtitle']}
+              sx={{
+                color: 'gray_.light',
+                '::selection': {
+                  color: 'white',
+                  bgcolor: 'app.orange',
+                },
+              }}
+            >
+              {item.subtitle}
             </Box>
-
-            <Box className={styles['']}></Box>
-            <Box className={styles['']}></Box>
           </Box>
-        ))}
-      </ContentContainer>
+          <Box className={styles['content']}>
+            <Box
+              component="img"
+              className={styles['content-image']}
+              sx={{
+                '::selection': {
+                  color: 'white',
+                  bgcolor: 'app.orange',
+                },
+              }}
+              src={item.img}
+              alt={item.imgAlt}
+            />
+
+            <Box className={styles['content-main']}>
+              <Box className={styles['content-main-description']}>
+                {item.descriptions.map((description, index) => (
+                  <Box
+                    key={index}
+                    className={styles['content-main-description-text']}
+                    sx={{
+                      '::selection': {
+                        color: 'white',
+                        bgcolor: 'app.orange',
+                      },
+                    }}
+                  >
+                    {description}
+                  </Box>
+                ))}
+              </Box>
+              <Box className={styles['content-main-description-button']}>
+                <TextButton preset="pink" size={lgDown ? 'small' : 'medium'}>
+                  Learn more
+                </TextButton>
+                <Box
+                  className={styles['content-main-description-divider']}
+                  sx={{ borderColor: 'gray_.dark' }}
+                ></Box>
+                {item.lists.map((list, index) => (
+                  <Box
+                    key={index}
+                    className={styles['content-main-description-list']}
+                  >
+                    <Box
+                      className={styles['content-main-description-list-title']}
+                      sx={{
+                        '::selection': {
+                          color: 'white',
+                          bgcolor: 'app.orange',
+                        },
+                      }}
+                    >
+                      <FontAwesomeIcon
+                        icon={faCheck}
+                        style={{
+                          color: '#5B6A7B',
+                          fontSize: lgDown ? 'medium' : 'large',
+                        }}
+                      />
+                      <Box
+                        className={
+                          styles['content-main-description-list-title-text']
+                        }
+                        sx={{
+                          '::selection': {
+                            color: 'white',
+                            bgcolor: 'app.orange',
+                          },
+                        }}
+                      >
+                        {list.title}
+                      </Box>
+                    </Box>
+                    <Box
+                      className={styles['content-main-description-list-detail']}
+                      sx={{
+                        '::selection': {
+                          color: 'white',
+                          bgcolor: 'app.orange',
+                        },
+                      }}
+                    >
+                      {list.detail}
+                    </Box>
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      ))}
     </ScrollContainer>
   );
 };

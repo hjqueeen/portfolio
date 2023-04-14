@@ -1,26 +1,23 @@
 import { Box } from '@mui/material';
 import { Masonry } from '@mui/lab';
-
-// Assets
-// import version_control from '../../assets/version_control.png';
-// import frontend from '../../assets/frontend.png';
-// import backend from '../../assets/backend.png';
-// import communication from '../../assets/communication.png';
+import { useTranslation } from 'react-i18next';
 
 // Components
-import { ContentContainer } from '../../shared/components/ContentContainer/ContentContainer';
 import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';
-import { TextButton } from '../../shared/components/TextButton/TextButton';
-
-import styles from './Skill.module.scss';
-import { useTranslation } from 'react-i18next';
 import { TextCard } from '../../shared/components/TextCard/TextCard';
+
+// Hooks
+import { useBreakpoints } from '../../shared/hooks/use-breakpoints.hook';
+
+// Styles
+import styles from './Skill.module.scss';
 
 type SkillProps = {
   scrollTo: string;
 };
 
 const Skill = (props: SkillProps) => {
+  const { lgDown } = useBreakpoints();
   const { t } = useTranslation();
   const skillItem = [
     {
@@ -52,28 +49,30 @@ const Skill = (props: SkillProps) => {
   ];
 
   return (
-    <ScrollContainer name={props.scrollTo} bgColor="app.purple">
-      <ContentContainer
-        title={t('app.skill.title')}
-        textColor="white"
-        iconColor="white"
-      >
-        <Box className={styles['skill']}>
-          <Box className={styles['skill-masonry']}></Box>
-          <Masonry
-            columns={{ xs: 1, md: 2, lg: 3 }}
-            spacing={4}
-            defaultColumns={3}
-            defaultHeight={300}
-          >
-            {skillItem.map((item, index) => {
-              return (
-                <TextCard key={index} title={item.title} skills={item.skills} />
-              );
-            })}
-          </Masonry>
-        </Box>
-      </ContentContainer>
+    <ScrollContainer
+      name={props.scrollTo}
+      bgColor="app.purple"
+      heightFit={lgDown ? true : false}
+      title={t('app.skill.title')}
+      textColor="white"
+      iconColor="white"
+    >
+      <Box className={styles['skill']}>
+        {/* <Box className={styles['skill-masonry']}> */}
+        <Masonry
+          columns={{ xs: 1, md: 2, lg: 3 }}
+          spacing={4}
+          defaultColumns={3}
+          defaultHeight={300}
+        >
+          {skillItem.map((item, index) => {
+            return (
+              <TextCard key={index} title={item.title} skills={item.skills} />
+            );
+          })}
+        </Masonry>
+        {/* </Box> */}
+      </Box>
     </ScrollContainer>
   );
 };

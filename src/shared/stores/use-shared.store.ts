@@ -1,12 +1,14 @@
-import create from 'zustand';
+import { create } from 'zustand';
 
 // Models
-import { Theme } from '../models/shared.types';
-
-// Models
+import { Page, Theme } from '../models/shared.types';
 
 export interface SharedState {
   theme: Theme;
+  page: string | undefined;
+  titleColor: string | undefined;
+  setPage: (page: Page | undefined) => void;
+  setTitleColor: (titleColor: string | undefined) => void;
   setTheme: (theme: Theme) => void;
 }
 
@@ -23,6 +25,10 @@ const getThemeEnumByStringVal = (theme: string) => {
 export const useSharedStore = create<SharedState>((set) => ({
   notification: undefined,
   theme: getThemeEnumByStringVal(localStorage.getItem('app:theme') || 'light'),
+  page: undefined,
+  titleColor: undefined,
+  setPage: (page: Page | undefined) => set({ page }),
+  setTitleColor: (titleColor: string | undefined) => set({ titleColor }),
   setTheme: (theme: Theme) => {
     set({ theme });
     document.documentElement.setAttribute('class', theme);

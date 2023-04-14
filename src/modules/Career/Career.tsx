@@ -1,5 +1,5 @@
 //Components
-import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';
+// import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';
 
 type CareerProps = {
   scrollTo: string;
@@ -7,9 +7,9 @@ type CareerProps = {
 
 const Career = (props: CareerProps) => {
   return (
-    <ScrollContainer name={props.scrollTo}>
-      <div>Career</div>
-    </ScrollContainer>
+    // <ScrollContainer name={props.scrollTo}>
+    <div>Career</div>
+    // </ScrollContainer>
   );
 };
 

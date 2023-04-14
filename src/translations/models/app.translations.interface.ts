@@ -14,6 +14,11 @@ export interface AppTranslations {
     email_detail: string;
     address: string;
     address_detail: string;
+    profile: {
+      text1: string;
+      text2: string;
+      text3: string;
+    };
   };
   skill: {
     title: string;
@@ -43,4 +48,5 @@ export interface AppTranslations {
       };
     };
   };
+  title: string;
 }

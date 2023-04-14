@@ -2,7 +2,7 @@
 import { DefaultTFuncReturn } from 'i18next';
 import styles from './TextCard.module.scss';
 import { Box } from '@mui/material';
-import { SkillButton, TextButton } from '../TextButton/TextButton';
+import { SkillButton } from '../TextButton/TextButton';
 
 type TextCardProps = {
   title: DefaultTFuncReturn | string;
@@ -14,16 +14,18 @@ export const TextCard = (props: TextCardProps) => {
     <Box className={styles['text-card']} sx={{ bgcolor: 'white' }}>
       <Box
         className={styles['text-card-title']}
-        sx={{
-          color: 'app.pink',
-          fontFamily: 'Montserrat',
-        }}
+        // sx={{
+        //   color: 'app.purple',
+        //   fontFamily: 'Montserrat',
+        // }}
       >
-        {props.title}
+        <SkillButton preset="orange" size="medium">
+          {props.title}
+        </SkillButton>
       </Box>
       <Box className={styles['skill-items']}>
         {props.skills.map((skill, index) => (
-          <SkillButton key={index} preset="gray" size="small">
+          <SkillButton key={index} preset="white_purple" size="small">
             {skill}
           </SkillButton>
         ))}

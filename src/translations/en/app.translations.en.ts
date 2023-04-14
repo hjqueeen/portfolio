@@ -17,6 +17,12 @@ export const appTranslationsEN: AppTranslations = {
     email_detail: 'hjqueeen@gmail.com',
     address: 'Address',
     address_detail: 'Berlin, Germany',
+    profile: {
+      text1: 'Hello. I am a , ',
+      text2: 'developer who is still evolving.',
+      text3:
+        'person who perseveres through difficult tasks and takes responsibility for the tasks assigned to me.',
+    },
   },
   skill: {
     title: 'SKILLS',
@@ -46,4 +52,5 @@ export const appTranslationsEN: AppTranslations = {
       },
     },
   },
+  title: "HJK's Portfolio",
 };

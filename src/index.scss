@@ -4,6 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
+:root {
+  --vh: 100%;
+}
+
 body {
   max-width: '3020px';
   margin: 0;

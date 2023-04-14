@@ -14,13 +14,26 @@ export const ImageCard = (props: ImageCardProps) => {
   return (
     <Box className={styles['img-card']} sx={{ bgcolor: 'white' }}>
       <Box className={styles['img-card-title']}>
-        <img
+        <Box
+          component="img"
           className={styles['img-card-image']}
           src={props.titleImg}
           alt={props.titleImgAlt}
+          sx={{
+            '::selection': {
+              color: 'white',
+              bgcolor: 'app.purple',
+            },
+          }}
         />
       </Box>
-      <Box sx={{ color: 'app.gray.dark' }}>{props.children}</Box>
+      <Box
+        sx={{
+          color: 'app.gray.dark',
+        }}
+      >
+        {props.children}
+      </Box>
     </Box>
   );
 };
