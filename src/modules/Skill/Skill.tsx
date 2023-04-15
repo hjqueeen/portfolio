@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import { Masonry } from '@mui/lab';
 import { useTranslation } from 'react-i18next';
 
@@ -11,6 +11,7 @@ import { useBreakpoints } from '../../shared/hooks/use-breakpoints.hook';
 
 // Styles
 import styles from './Skill.module.scss';
+import { SkillButton } from '../../shared/components/TextButton/TextButton';
 
 type SkillProps = {
   scrollTo: string;
@@ -58,7 +59,6 @@ const Skill = (props: SkillProps) => {
       iconColor="white"
     >
       <Box className={styles['skill']}>
-        {/* <Box className={styles['skill-masonry']}> */}
         <Masonry
           columns={{ xs: 1, md: 2, lg: 3 }}
           spacing={4}
@@ -71,7 +71,6 @@ const Skill = (props: SkillProps) => {
             );
           })}
         </Masonry>
-        {/* </Box> */}
       </Box>
     </ScrollContainer>
   );

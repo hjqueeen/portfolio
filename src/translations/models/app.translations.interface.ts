@@ -1,4 +1,76 @@
 export interface AppTranslations {
+  project1: {
+    title: string;
+    subtitle: string;
+    descriptions: {
+      text1: string;
+      text2: string;
+      text3: string;
+      text4: string;
+      text5: string;
+      text6: string;
+    };
+    list1: {
+      title: string;
+      detail: string;
+    };
+    list2: {
+      title: string;
+      detail: string;
+    };
+    list3: {
+      title: string;
+      detail: string;
+    };
+  };
+  project2: {
+    title: string;
+    subtitle: string;
+    descriptions: {
+      text1: string;
+      text2: string;
+      text3: string;
+      text4: string;
+      text5: string;
+      text6: string;
+    };
+    list1: {
+      title: string;
+      detail: string;
+    };
+    list2: {
+      title: string;
+      detail: string;
+    };
+    list3: {
+      title: string;
+      detail: string;
+    };
+  };
+  project3: {
+    title: string;
+    subtitle: string;
+    descriptions: {
+      text1: string;
+      text2: string;
+      text3: string;
+      text4: string;
+      text5: string;
+      text6: string;
+    };
+    list1: {
+      title: string;
+      detail: string;
+    };
+    list2: {
+      title: string;
+      detail: string;
+    };
+    list3: {
+      title: string;
+      detail: string;
+    };
+  };
   intro: {
     title: string;
     subtitle: string;

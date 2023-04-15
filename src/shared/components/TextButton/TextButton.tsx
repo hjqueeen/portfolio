@@ -11,7 +11,7 @@ type TextButtonProps = {
   children: DefaultTFuncReturn | string;
   classes?: string;
   preset?: 'gray' | 'pink' | 'white_puple' | 'purple';
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'base' | 'medium' | 'large';
   onClick?: () => void;
 };
 
@@ -71,18 +71,19 @@ export const TextButton = (props: TextButtonProps) => {
         default:
       }
     } else {
-      sxPreset = { color: 'gray_.dark', fontFamily: 'OCR A' };
+      sxPreset = { color: 'app.gray.dark', fontFamily: 'OCR A' };
     }
 
     if (props.size) {
       switch (props.size) {
         case 'small':
-          sxSize = { fontSize: 'small', padding: '5px 10px' };
-
+          sxSize = { fontSize: '10px', padding: '2px 4px' };
+          break;
+        case 'base':
+          sxSize = { fontSize: 'medium', padding: '5px 10px' };
           break;
         case 'medium':
           sxSize = { fontSize: 'medium', padding: '10px 25px' };
-
           break;
         case 'large':
           sxSize = { fontSize: '30px', padding: '15px 30px' };
@@ -91,7 +92,7 @@ export const TextButton = (props: TextButtonProps) => {
         default:
       }
     } else {
-      sxSize = { fontSize: 'small', padding: '3px 6px' };
+      sxSize = { fontSize: 'small', padding: '5px 10px' };
     }
     setSx({ ...sxSize, ...sxPreset });
   }, [props.preset, props.size]);
@@ -184,7 +185,7 @@ export const SkillButton = (props: SkillButtonProps) => {
         default:
       }
     } else {
-      sxPreset = { color: 'gray_.dark', fontFamily: 'OCR A' };
+      sxPreset = { color: 'app.gray.dark', fontFamily: 'OCR A' };
     }
 
     if (props.size) {

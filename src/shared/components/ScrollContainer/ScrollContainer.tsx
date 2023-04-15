@@ -97,7 +97,7 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
                   component="h2"
                   sx={{
                     fontFamily: 'OCR A',
-                    color: props.textColor ? props.textColor : 'gray_.dark',
+                    color: props.textColor ? props.textColor : 'app.gray.dark',
                     '::selection': {
                       color: props.selectionColor ? 'white' : 'app.pink',
                       bgcolor: props.selectionColor
@@ -111,9 +111,10 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
               </Box>
 
               {/* <Box
-                sx={{ borderColor: 'gray_.dark' }}
+                sx={{ borderColor: 'app.gray.dark' }}
                 className={styles['content-container-divider']}
               ></Box> */}
+
               {props.children}
             </Box>
           </Box>

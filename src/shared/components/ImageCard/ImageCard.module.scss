@@ -1,5 +1,5 @@
 .img-card {
-  @apply rounded-xl shadow-xl p-2 m-4
+  @apply rounded-xl shadow-xl p-2 m-4 
   lg:p-4 lg:px-8 lg:mx-8 lg:mt-10 lg:mb-4;
   &-title {
     @apply text-2xl italic underline underline-offset-2;

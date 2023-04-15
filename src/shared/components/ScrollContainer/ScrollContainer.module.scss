@@ -32,15 +32,15 @@
     @apply flex flex-row items-center;
     &-text {
       @apply ml-2 mb-1 font-bold text-2xl
-      lg:text-4xl;
+      sm:text-3xl lg:text-4xl;
     }
   }
   &-subtitle {
-    @apply ml-2 font-normal text-lg
-    lg:text-2xl;
+    @apply ml-2 font-normal text-base
+    sm:text-xl lg:text-2xl;
   }
   &-icon {
-    color: 'gray_.light';
+    color: 'app.gray.light';
   }
   &-divider {
     @apply w-20 mt-3 border-0 border-b-2 border-solid;

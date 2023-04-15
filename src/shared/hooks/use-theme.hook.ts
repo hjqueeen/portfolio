@@ -21,17 +21,6 @@ declare module '@mui/material/styles' {
         light: string;
       };
     };
-    pink: {
-      light: string;
-      dark: string;
-    };
-    yellow: {
-      light: string;
-    };
-    gray_: {
-      light: string;
-      dark: string;
-    };
   }
 }
 
@@ -49,7 +38,6 @@ const breakpoints = {
 };
 const app = {
   pink: '#FF7767',
-  // purple: '#6919FF',
   purple: '#555FDA',
   orange: '#FF9E71',
   gray: {
@@ -58,40 +46,23 @@ const app = {
   },
 };
 
-const pink = {
-  light: '#F3E9EA',
-  medium: '#CE5663',
-  medium_light: '#DD8EA4',
-  dark: '#C43040',
-};
-
-const yellow = {
-  light: '#FDDD88',
-  dark: '#FFA407',
-};
-
-const gray_ = {
-  light: '#5B6A7B',
-  dark: '#303841',
-};
-
 const typography = {
   box: {
     fontSize: 14,
   },
-  fontFamily: "'Open Sans', 'sans-serif'",
+  fontFamily: "'OCR A', 'Montserrat'",
   fontSize: 14,
 };
 
 export const themeDark = createTheme({
   breakpoints,
-  palette: { app, pink, yellow, gray_ },
+  palette: { app },
   typography,
 });
 
 export const themeLight = createTheme({
   breakpoints,
-  palette: { app, pink, yellow, gray_ },
+  palette: { app },
   typography,
 });
 

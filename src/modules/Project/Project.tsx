@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Slider from 'react-slick';
 
 // Components
 import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';
@@ -11,6 +12,10 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 // Assets
 import spring from '../../assets/3spring.png';
+import portfolio1 from '../../assets/project/portfolio/portfolio1.png';
+import portfolio2 from '../../assets/project/portfolio/portfolio2.png';
+import portfolio3 from '../../assets/project/portfolio/portfolio3.png';
+import portfolio4 from '../../assets/project/portfolio/portfolio4.png';
 
 // Models
 import { ProjectType } from '../../shared/models/shared.types';
@@ -24,42 +29,59 @@ type ProjectProps = {
 };
 
 const Project = (props: ProjectProps) => {
-  const { lgDown } = useBreakpoints();
+  const { smDown } = useBreakpoints();
   const { t } = useTranslation();
   const project_items: ProjectType[] = [
     {
-      title: 'Title 제목',
-      subtitle: 'subtitle 설명입니다',
-      img: spring,
-      imgAlt: '',
+      title: t('app.project1.title'),
+      subtitle: t('app.project1.subtitle'),
+      imgs: [
+        {
+          src: portfolio1,
+          alt: 'portfolio1',
+        },
+        {
+          src: portfolio2,
+          alt: 'portfolio2',
+        },
+        {
+          src: portfolio3,
+          alt: 'portfolio3',
+        },
+        {
+          src: portfolio4,
+          alt: 'portfolio4',
+        },
+      ],
       descriptions: [
-        'This is a source code repository.',
-        'This is a source code repository.',
-        'This is a source code repository.',
-        'This is a source code repository.',
-        'This is a source code repository.',
+        t('app.project1.descriptions.text1'),
+        t('app.project1.descriptions.text2'),
       ],
       lists: [
         {
-          title: '주요기능',
-          detail:
-            '자주 부르는 노래의 가수명 및 제목 기록하기, 간편한 분류를 위해 각 노래에 태깅하기, 노래의 가수명 및 제목으로 검색해 보기, 가수 또는 태그에 따라 분류해 보기',
+          title: t('app.project1.list1.title'),
+          detail: t('app.project1.list1.detail'),
         },
         {
-          title: '주요기능',
-          detail: '자주 부르는 노래의 가수명 및 제목 기록하기.',
+          title: t('app.project1.list2.title'),
+          detail: t('app.project1.list2.detail'),
         },
         {
-          title: '주요기능',
-          detail: '자주 부르는 노래의 가수명 및 제목 기록하기.',
-        },
-        {
-          title: '주요기능',
-          detail: '자주 부르는 노래의 가수명 및 제목 기록하기.',
+          title: t('app.project1.list3.title'),
+          detail: t('app.project1.list3.detail'),
         },
       ],
     },
   ];
+
+  const settings = {
+    // dots: true,
+    // // infinite: true,
+    // speed: 500,
+    // slidesToShow: 1,
+    // slidesToScroll: 1,
+  };
+
   return (
     <ScrollContainer
       name={props.scrollTo}
@@ -91,7 +113,7 @@ const Project = (props: ProjectProps) => {
             <Box
               className={styles['project-card-header-subtitle']}
               sx={{
-                color: 'gray_.light',
+                color: 'app.gray.light',
                 '::selection': {
                   color: 'white',
                   bgcolor: 'app.orange',
@@ -102,19 +124,20 @@ const Project = (props: ProjectProps) => {
             </Box>
           </Box>
           <Box className={styles['content']}>
-            <Box
-              component="img"
-              className={styles['content-image']}
-              sx={{
-                '::selection': {
-                  color: 'white',
-                  bgcolor: 'app.orange',
-                },
-              }}
-              src={item.img}
-              alt={item.imgAlt}
-            />
-
+            <Box className={styles['content-slider']}>
+              <Box
+                component="img"
+                className={styles['content-image']}
+                sx={{
+                  '::selection': {
+                    color: 'white',
+                    bgcolor: 'white',
+                  },
+                }}
+                src={portfolio1}
+                alt="portfolio1"
+              />
+            </Box>
             <Box className={styles['content-main']}>
               <Box className={styles['content-main-description']}>
                 {item.descriptions.map((description, index) => (
@@ -133,12 +156,12 @@ const Project = (props: ProjectProps) => {
                 ))}
               </Box>
               <Box className={styles['content-main-description-button']}>
-                <TextButton preset="pink" size={lgDown ? 'small' : 'medium'}>
+                <TextButton preset="pink" size={smDown ? 'small' : 'medium'}>
                   Learn more
                 </TextButton>
                 <Box
                   className={styles['content-main-description-divider']}
-                  sx={{ borderColor: 'gray_.dark' }}
+                  sx={{ borderColor: 'app.gray.dark' }}
                 ></Box>
                 {item.lists.map((list, index) => (
                   <Box
@@ -158,7 +181,7 @@ const Project = (props: ProjectProps) => {
                         icon={faCheck}
                         style={{
                           color: '#5B6A7B',
-                          fontSize: lgDown ? 'medium' : 'large',
+                          fontSize: smDown ? 'medium' : 'large',
                         }}
                       />
                       <Box

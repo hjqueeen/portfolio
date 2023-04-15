@@ -1,6 +1,80 @@
 import { AppTranslations } from '../models/app.translations.interface';
 
 export const appTranslationsKO: AppTranslations = {
+  project1: {
+    title: '포트폴리오 웹 페이지 만들기',
+    subtitle: '첫번째 개인 프로젝트',
+    descriptions: {
+      text1:
+        'React 를 활용하여 포트폴리오용 웹페이지를 제작하였습니다. 지금 보고 있는 바로 이 웹페이지입니다.',
+      text2:
+        '설계부터 구현, 배포까지 직접 만들어 보면서 지금까지 배운 내용을 실전에서 활용할 수 있었습니다.',
+      text3: '',
+      text4: '',
+      text5: '',
+      text6: '',
+    },
+    list1: {
+      title: '주요 기능',
+      detail: '반응형 웹페이지, 재사용가능한 컴포넌트로 확장이 용이',
+    },
+    list2: {
+      title: 'GitHub',
+      detail: 'https://github.com/hjqueeen/portfoloi',
+    },
+    list3: {
+      title: 'Frontend',
+      detail: 'React, TypeScript, Sass, Mui, Zustand',
+    },
+  },
+  project2: {
+    title: '',
+    subtitle: '',
+    descriptions: {
+      text1: '',
+      text2: '',
+      text3: '',
+      text4: '',
+      text5: '',
+      text6: '',
+    },
+    list1: {
+      title: '',
+      detail: '',
+    },
+    list2: {
+      title: '',
+      detail: '',
+    },
+    list3: {
+      title: '',
+      detail: '',
+    },
+  },
+  project3: {
+    title: '',
+    subtitle: '',
+    descriptions: {
+      text1: '',
+      text2: '',
+      text3: '',
+      text4: '',
+      text5: '',
+      text6: '',
+    },
+    list1: {
+      title: '',
+      detail: '',
+    },
+    list2: {
+      title: '',
+      detail: '',
+    },
+    list3: {
+      title: '',
+      detail: '',
+    },
+  },
   intro: {
     title: 'Hyejin Kim',
     subtitle: 'Developer Portfolio',

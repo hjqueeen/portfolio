@@ -18,8 +18,10 @@ export enum Page {
 export type ProjectType = {
   title: DefaultTFuncReturn | string;
   subtitle: DefaultTFuncReturn | string;
-  img: string;
-  imgAlt: string;
+  imgs: {
+    src: string;
+    alt: string;
+  }[];
   descriptions: DefaultTFuncReturn[] | string[];
   lists: {
     title: DefaultTFuncReturn | string;

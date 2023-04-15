@@ -1,6 +1,9 @@
 .archive {
-  @apply flex flex-col text-xs
+  @apply flex flex-col text-xs h-fit
   md:flex-row;
+  &-container {
+    @apply flex flex-col grow justify-center;
+  }
   &-address {
     @apply underline;
   }

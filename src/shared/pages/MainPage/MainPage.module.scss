@@ -3,15 +3,25 @@
 }
 
 .header {
-  @apply flex flex-col border-0 left-0 sticky top-0 w-full z-40 h-16 bg-white opacity-100;
+  @apply flex flex-col border-0 left-0 sticky top-0 w-full z-40 h-16 bg-white opacity-100 pr-2
+  sm:pr-0;
   &-title {
-    @apply truncate text-2xl
-    sm:text-4xl;
+    @apply truncate w-full text-2xl flex flex-row justify-between px-2
+    sm:text-2xl md:text-3xl lg:text-4xl;
   }
   &-content {
-    @apply flex flex-row h-full justify-between items-center mx-auto w-full max-w-6xl p-2;
+    @apply flex flex-col h-full justify-between items-end mx-auto w-full max-w-6xl p-1 align-middle
+    sm:flex-row sm:p-2;
+    &-icons {
+      @apply flex flex-row items-center mt-1;
+      // transform: translateY(100%) !important;
+      // transition: transform 5s ease-in-out !important;
+    }
   }
 }
+// .show {
+//   transform: translateY(0) !important;
+// }
 
 .header-title:hover {
   transform: translate(0, -2px);

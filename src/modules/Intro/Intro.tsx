@@ -29,10 +29,17 @@ const Intro = (props: IntroProps) => {
         disableIcon
         disableTitleUnderline
       >
-        <img
+        <Box
+          component="img"
           className={styles['intro-image']}
           src={developer}
           alt="developer"
+          sx={{
+            '::selection': {
+              color: 'white',
+              bgcolor: 'white',
+            },
+          }}
         />
         <Box className={styles['intro-text-button']}>
           <Link
