@@ -1,0 +1,48 @@
+.heightFit {
+  @apply h-fit;
+}
+
+.heightView {
+  @apply h-[calc(100vh-64px)];
+}
+
+.scroll {
+  &-container {
+    @apply flex w-full;
+  }
+  &-background {
+    @apply relative;
+    &-image {
+      @apply absolute w-full;
+    }
+  }
+}
+
+.background {
+  @apply absolute object-none object-top w-full h-full opacity-70 -z-40 bg-clip-padding;
+}
+
+.content-container {
+  @apply w-full mx-auto max-w-6xl h-full flex flex-col items-center justify-between p-4 py-8
+  lg:p-16;
+  &-header {
+    @apply flex flex-col items-center;
+  }
+  &-title {
+    @apply flex flex-row items-center;
+    &-text {
+      @apply ml-2 mb-1 font-bold text-2xl
+      sm:text-3xl lg:text-4xl;
+    }
+  }
+  &-subtitle {
+    @apply ml-2 font-normal text-base
+    sm:text-xl lg:text-2xl;
+  }
+  &-icon {
+    color: 'app.gray.light';
+  }
+  &-divider {
+    @apply w-20 mt-3 border-0 border-b-2 border-solid;
+  }
+}

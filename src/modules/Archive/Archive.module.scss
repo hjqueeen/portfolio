@@ -1,0 +1,21 @@
+.archive {
+  @apply flex flex-col text-xs h-fit
+  md:flex-row;
+  &-container {
+    @apply flex flex-col grow justify-center;
+  }
+  &-address {
+    @apply underline;
+  }
+  &-detail {
+    @apply mt-4 mb-2 font-bold;
+    &-ul {
+      @apply list-disc pl-4;
+
+      // list-style-type: disc;
+    }
+    &-li {
+      @apply align-middle my-3;
+    }
+  }
+}

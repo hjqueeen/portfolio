@@ -1,0 +1,18 @@
+.user-card {
+  @apply flex flex-row items-center w-fit my-1;
+
+  &-icon {
+    @apply w-10;
+  }
+  &-content {
+    @apply ml-6;
+    &-title {
+      @apply text-sm
+      lg:text-base;
+    }
+    &-subtitle {
+      @apply text-sm
+      lg:text-base;
+    }
+  }
+}

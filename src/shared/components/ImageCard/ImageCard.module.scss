@@ -1,0 +1,26 @@
+.img-card {
+  @apply rounded-xl shadow-xl p-2 m-4 
+  lg:p-4 lg:px-8 lg:mx-8 lg:mt-10 lg:mb-4;
+  &-title {
+    @apply text-2xl italic underline underline-offset-2;
+  }
+  &-image {
+    @apply rounded-lg w-1/3 mb-2
+    lg:mt-4;
+  }
+}
+
+.img-card:hover {
+  transform: translate(0, 5px);
+  transition: all 0.1s ease-in-out;
+}
+
+.img-card:hover:after {
+  transition: all 0.1s ease-in-out;
+  transform: translate(0, -5px);
+}
+
+.img-card:hover:before {
+  transition: all 0.1s ease-in-out;
+  transform: translate(0, -5px);
+}

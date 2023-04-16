@@ -1,0 +1,15 @@
+.intro {
+  @apply relative;
+  &-background {
+    @apply w-full absolute;
+    background: '#f3e9ea';
+  }
+  &-image {
+    @apply h-1/3
+    lg:h-1/2;
+  }
+}
+.intro-text-button {
+  @apply mt-5 flex flex-col items-center;
+  // margin-top: '128px';
+}

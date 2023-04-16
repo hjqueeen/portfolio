@@ -1,0 +1,36 @@
+.text-card {
+  @apply rounded-xl shadow-xl p-4 mx-8 my-4;
+  &-title {
+    // underline underline-offset-2
+    @apply text-lg italic flex flex-col items-center
+    lg:text-2xl;
+  }
+  &-image {
+    @apply w-full rounded-lg mt-4;
+  }
+}
+.skill-items {
+  @apply flex flex-col;
+  &-button {
+    @apply m-1;
+  }
+}
+
+.text-card:hover {
+  transform: translate(0, 5px);
+  transition: all 0.1s ease-in-out;
+}
+
+.text-card:hover:after {
+  transition: all 0.1s ease-in-out;
+  transform: translate(0, -5px);
+}
+
+.text-card:hover:before {
+  transition: all 0.1s ease-in-out;
+  transform: translate(0, -5px);
+}
+
+.skill-items {
+  @apply flex flex-col items-center mt-4;
+}
