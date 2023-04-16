@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/code_portfolio/static/css/main.6c53dc93.css",
-    "main.js": "/code_portfolio/static/js/main.7ce973f3.js",
-    "static/js/787.1ed0c42c.chunk.js": "/code_portfolio/static/js/787.1ed0c42c.chunk.js",
-    "static/media/hjkim2.png": "/code_portfolio/static/media/hjkim2.3d6579afb68083826212.png",
-    "static/media/portfolio1.png": "/code_portfolio/static/media/portfolio1.ef4704884bcdab5af1a7.png",
-    "static/media/portfolio2.png": "/code_portfolio/static/media/portfolio2.e785f3b4ae8224ddeba9.png",
-    "static/media/portfolio4.png": "/code_portfolio/static/media/portfolio4.18b22b3b0c5c7871a52a.png",
-    "static/media/programmiererin.png": "/code_portfolio/static/media/programmiererin.95196d9b5fff996fd040.png",
-    "static/media/portfolio3.png": "/code_portfolio/static/media/portfolio3.41ef459771e9a4e96df2.png",
-    "static/media/velog.png": "/code_portfolio/static/media/velog.ba2c6d316e155bc43a1e.png",
-    "static/media/GitHub_Logo.png": "/code_portfolio/static/media/GitHub_Logo.59434845fa77a81f320b.png",
-    "index.html": "/code_portfolio/index.html",
-    "main.6c53dc93.css.map": "/code_portfolio/static/css/main.6c53dc93.css.map",
-    "main.7ce973f3.js.map": "/code_portfolio/static/js/main.7ce973f3.js.map",
-    "787.1ed0c42c.chunk.js.map": "/code_portfolio/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/static/css/main.c10be8d4.css",
+    "main.js": "/static/js/main.df057e2c.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/hjkim2.png": "/static/media/hjkim2.3d6579afb68083826212.png",
+    "static/media/portfolio1.png": "/static/media/portfolio1.ef4704884bcdab5af1a7.png",
+    "static/media/portfolio2.png": "/static/media/portfolio2.e785f3b4ae8224ddeba9.png",
+    "static/media/portfolio4.png": "/static/media/portfolio4.18b22b3b0c5c7871a52a.png",
+    "static/media/programmiererin.png": "/static/media/programmiererin.95196d9b5fff996fd040.png",
+    "static/media/portfolio3.png": "/static/media/portfolio3.41ef459771e9a4e96df2.png",
+    "static/media/velog.png": "/static/media/velog.ba2c6d316e155bc43a1e.png",
+    "static/media/GitHub_Logo.png": "/static/media/GitHub_Logo.59434845fa77a81f320b.png",
+    "index.html": "/index.html",
+    "main.c10be8d4.css.map": "/static/css/main.c10be8d4.css.map",
+    "main.df057e2c.js.map": "/static/js/main.df057e2c.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c53dc93.css",
-    "static/js/main.7ce973f3.js"
+    "static/css/main.c10be8d4.css",
+    "static/js/main.df057e2c.js"
   ]
 }
