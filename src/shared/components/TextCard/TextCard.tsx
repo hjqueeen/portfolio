@@ -19,11 +19,8 @@ export const TextCard = (props: TextCardProps) => {
       </Box>
       <Box className={styles['skill-items']}>
         {props.skills.map((skill, index) => (
-          <Box className={styles['skill-items-button']}>
-            {' '}
-            <SkillButton key={index} preset="white_purple">
-              {skill}
-            </SkillButton>
+          <Box key={index} className={styles['skill-items-button']}>
+            <SkillButton preset="white_purple">{skill}</SkillButton>
           </Box>
         ))}
       </Box>

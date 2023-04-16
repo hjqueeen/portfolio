@@ -38,7 +38,7 @@ const MainPage = (props: MainPageProps) => {
   useEffect(() => {
     setTimeout(() => {
       mainPage.current && mainPage.current.scrollIntoView();
-    }, 200);
+    }, 300);
   }, []);
 
   return (
