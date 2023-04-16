@@ -17,7 +17,7 @@ export const appTranslationsEN: AppTranslations = {
     list1: {
       title: 'Design Draft',
       detail:
-        'https://xd.adobe.com/view/71f47da8-811b-4187-bc9d-317e8abb0296-24a7/',
+        'https://xd.adobe.com/view/9ca42e05-4621-4844-b961-0a7c3af67053-c9f7/',
     },
     list2: {
       title: 'Main Function',
@@ -25,7 +25,7 @@ export const appTranslationsEN: AppTranslations = {
     },
     list3: {
       title: 'GitHub',
-      detail: 'https://github.com/hjqueeen/portfoloi',
+      detail: 'https://github.com/hjqueeen/portfolio',
     },
     list4: {
       title: 'Frontend',

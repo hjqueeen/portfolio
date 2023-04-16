@@ -25,7 +25,7 @@ export const appTranslationsKO: AppTranslations = {
     },
     list3: {
       title: 'GitHub',
-      detail: 'https://github.com/hjqueeen/portfoloi',
+      detail: 'https://github.com/hjqueeen/portfolio',
     },
     list4: {
       title: 'Frontend',

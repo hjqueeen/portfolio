@@ -1,20 +1,16 @@
-.heightFit {
-  @apply h-fit;
-}
+// .heightFit {
+//   @apply h-fit;
+// }
 
-.heightView {
-  @apply h-[calc(100vh-64px)];
-}
+// .heightView {
+//   // @apply h-[calc(100vh-64px)];
+//   min-height: calc(100vh - 64px);
+// }
 
 .scroll {
   &-container {
-    @apply flex w-full;
-  }
-  &-background {
-    @apply relative;
-    &-image {
-      @apply absolute w-full;
-    }
+    @apply flex w-full h-fit;
+    min-height: calc(100vh - 64px);
   }
 }
 
@@ -23,7 +19,7 @@
 }
 
 .content-container {
-  @apply w-full mx-auto max-w-6xl h-full flex flex-col items-center justify-between p-4 py-8
+  @apply w-full mx-auto h-full flex flex-col items-center justify-between p-4 py-8 max-w-6xl
   lg:p-16;
   &-header {
     @apply flex flex-col items-center;

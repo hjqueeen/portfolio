@@ -55,6 +55,7 @@ function App() {
         setVhfunction();
       });
     };
+    // eslint-disable-next-line
   }, []);
 
   // Set height

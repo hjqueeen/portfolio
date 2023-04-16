@@ -54,8 +54,9 @@ const AboutMe = (props: AboutMeProps) => {
           >
             {t('app.introduction.profile.text1')}
           </Box>
-          {profile_texts.map((text) => (
+          {profile_texts.map((text, index) => (
             <Box
+              key={index}
               className={styles['introduction-profile-detail-text']}
               sx={{
                 color: 'white',

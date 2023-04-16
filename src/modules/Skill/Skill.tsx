@@ -1,14 +1,9 @@
-import { Box, Grid } from '@mui/material';
-import { Masonry } from '@mui/lab';
+import { Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 // Components
 import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';
 import { TextCard } from '../../shared/components/TextCard/TextCard';
-import { SkillButton } from '../../shared/components/SkillButton/SkillButton';
-
-// Hooks
-import { useBreakpoints } from '../../shared/hooks/use-breakpoints.hook';
 
 // Styles
 import styles from './Skill.module.scss';
@@ -18,7 +13,6 @@ type SkillProps = {
 };
 
 const Skill = (props: SkillProps) => {
-  const { mdDown } = useBreakpoints();
   const { t } = useTranslation();
   const skillItem = [
     {
@@ -53,7 +47,6 @@ const Skill = (props: SkillProps) => {
     <ScrollContainer
       name={props.scrollTo}
       bgColor="app.purple"
-      heightFit={mdDown ? true : false}
       title={t('app.skill.title')}
       textColor="white"
       iconColor="white"

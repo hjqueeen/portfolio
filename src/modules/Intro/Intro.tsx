@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Box } from '@mui/material';
+import { Link } from 'react-scroll';
+
 // Assets
 import developer from '../../assets/programmiererin.png';
 
@@ -9,8 +11,6 @@ import { TextButton } from '../../shared/components/TextButton/TextButton';
 
 // Styles
 import styles from './Intro.module.scss';
-import ScrollLink from '../../shared/components/ScrollLink/ScrollLink';
-import { Link } from 'react-scroll';
 
 type IntroProps = {
   scrollTo: string;

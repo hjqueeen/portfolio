@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 
 // Icons
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+// import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 // Components
 import Intro from '../../../modules/Intro/Intro';
@@ -38,7 +38,7 @@ const MainPage = (props: MainPageProps) => {
   useEffect(() => {
     setTimeout(() => {
       mainPage.current && mainPage.current.scrollIntoView();
-    }, 200);
+    }, 300);
   }, []);
 
   return (
@@ -96,7 +96,7 @@ const MainPage = (props: MainPageProps) => {
       {/* Background Image */}
 
       {/* Main Content */}
-      <Box className="flex h-full">
+      <Box className={styles['content']}>
         <Intro scrollTo="intro" />
         <AboutMe scrollTo="AboutMe" />
         <Skill scrollTo="skill" />
