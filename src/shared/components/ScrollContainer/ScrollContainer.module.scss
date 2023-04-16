@@ -18,9 +18,8 @@
 }
 
 .content-container {
-  @apply w-full mx-auto h-full flex flex-col items-center justify-between p-4 py-8
+  @apply w-full mx-auto h-full flex flex-col items-center justify-between p-4 py-8 max-w-6xl
   lg:p-16;
-  max-width: 72rem /* 1152px */;
   &-header {
     @apply flex flex-col items-center;
   }
