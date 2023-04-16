@@ -20,7 +20,7 @@
   @apply flex flex-col px-2
   sm:flex-row sm:px-6;
   &-slider {
-    @apply mr-2 border h-fit
+    @apply mr-2 border h-fit;
     width: 100%;
   }
   &-main {

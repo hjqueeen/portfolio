@@ -1,6 +1,7 @@
 .main-page {
-  @apply relative shrink-0;
+  @apply relative shrink-0 w-[100vw];
   min-width: 280px;
+  width: 100vw;
 }
 
 .header {
