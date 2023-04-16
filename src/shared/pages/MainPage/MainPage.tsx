@@ -36,7 +36,9 @@ const MainPage = (props: MainPageProps) => {
 
   // Scroll to Top on mount
   useEffect(() => {
-    mainPage.current && mainPage.current.scrollIntoView();
+    setTimeout(() => {
+      mainPage.current && mainPage.current.scrollIntoView();
+    }, 200);
   }, []);
 
   return (
