@@ -15,14 +15,19 @@ export const appTranslationsKO: AppTranslations = {
       text6: '',
     },
     list1: {
+      title: 'Design Draft',
+      detail:
+        'https://xd.adobe.com/view/9ca42e05-4621-4844-b961-0a7c3af67053-c9f7/',
+    },
+    list2: {
       title: '주요 기능',
       detail: '반응형 웹페이지, 재사용가능한 컴포넌트로 확장이 용이',
     },
-    list2: {
+    list3: {
       title: 'GitHub',
       detail: 'https://github.com/hjqueeen/portfoloi',
     },
-    list3: {
+    list4: {
       title: 'Frontend',
       detail: 'React, TypeScript, Sass, Mui, Zustand',
     },

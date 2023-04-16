@@ -5,17 +5,17 @@ import { DefaultTFuncReturn } from 'i18next';
 import clsx from 'clsx';
 
 // Styles
-import styles from './TextButton.module.scss';
+import styles from './SkillButton.module.scss';
 
-type TextButtonProps = {
+type SkillButtonProps = {
   children: DefaultTFuncReturn | string;
   classes?: string;
-  preset?: 'gray' | 'pink' | 'white_puple' | 'purple';
-  size?: 'small' | 'base' | 'medium' | 'large';
+  preset?: 'gray' | 'pink' | 'white_purple' | 'purple' | 'orange';
+  fontFamily?: 'OCR A';
+  size?: 'small' | 'medium' | 'large';
   onClick?: () => void;
 };
-
-export const TextButton = (props: TextButtonProps) => {
+export const SkillButton = (props: SkillButtonProps) => {
   const [sx, setSx] = useState<SxProps<Theme> | undefined>(undefined);
 
   useEffect(() => {
@@ -46,6 +46,18 @@ export const TextButton = (props: TextButtonProps) => {
             },
           };
           break;
+        case 'orange':
+          sxPreset = {
+            color: 'white',
+            bgcolor: 'app.orange',
+            border: 'white 2px solid',
+            fontFamily: 'OCR A',
+            '&:hover': {
+              color: 'app.orange',
+              bgcolor: 'white',
+            },
+          };
+          break;
         case 'purple':
           sxPreset = {
             color: 'white',
@@ -57,11 +69,11 @@ export const TextButton = (props: TextButtonProps) => {
             },
           };
           break;
-        case 'white_puple':
+        case 'white_purple':
           sxPreset = {
             color: 'app.purple',
             bgcolor: 'white',
-            border: 'app.purple 2px solid',
+            border: '#555FDA 1px solid',
             '&:hover': {
               color: 'white',
               bgcolor: 'app.purple',
@@ -77,13 +89,12 @@ export const TextButton = (props: TextButtonProps) => {
     if (props.size) {
       switch (props.size) {
         case 'small':
-          sxSize = { fontSize: '10px', padding: '2px 4px' };
-          break;
-        case 'base':
-          sxSize = { fontSize: 'medium', padding: '5px 10px' };
+          sxSize = { fontSize: 'small', padding: '5px 10px' };
+
           break;
         case 'medium':
           sxSize = { fontSize: 'medium', padding: '10px 25px' };
+
           break;
         case 'large':
           sxSize = { fontSize: '30px', padding: '15px 30px' };
@@ -92,14 +103,14 @@ export const TextButton = (props: TextButtonProps) => {
         default:
       }
     } else {
-      sxSize = { fontSize: 'small', padding: '5px 10px' };
+      sxSize = { fontSize: 'small', padding: '3px 6px' };
     }
     setSx({ ...sxSize, ...sxPreset });
   }, [props.preset, props.size]);
 
   return (
     <Button
-      className={clsx(styles['textbutton'], props.classes)}
+      className={clsx(styles['skillbutton'], props.classes)}
       variant="text"
       sx={{ ...sx }}
       onClick={props.onClick}

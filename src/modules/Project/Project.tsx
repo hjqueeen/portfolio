@@ -61,6 +61,7 @@ const Project = (props: ProjectProps) => {
         {
           title: t('app.project1.list1.title'),
           detail: t('app.project1.list1.detail'),
+          link: true,
         },
         {
           title: t('app.project1.list2.title'),
@@ -69,6 +70,11 @@ const Project = (props: ProjectProps) => {
         {
           title: t('app.project1.list3.title'),
           detail: t('app.project1.list3.detail'),
+          link: true,
+        },
+        {
+          title: t('app.project1.list4.title'),
+          detail: t('app.project1.list4.detail'),
         },
       ],
     },
@@ -201,13 +207,24 @@ const Project = (props: ProjectProps) => {
                     <Box
                       className={styles['content-main-description-list-detail']}
                       sx={{
+                        textDecoration: list.link ? 'underline' : undefined,
+                        color: list.link ? 'app.pink' : undefined,
                         '::selection': {
                           color: 'white',
                           bgcolor: 'app.orange',
                         },
                       }}
                     >
-                      {list.detail}
+                      {list.link && (
+                        <a
+                          href={list.detail?.toString()}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {list.detail}
+                        </a>
+                      )}
+                      {!list.link && list.detail}
                     </Box>
                   </Box>
                 ))}

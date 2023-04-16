@@ -15,14 +15,19 @@ export const appTranslationsEN: AppTranslations = {
       text6: '',
     },
     list1: {
+      title: 'Design Draft',
+      detail:
+        'https://xd.adobe.com/view/71f47da8-811b-4187-bc9d-317e8abb0296-24a7/',
+    },
+    list2: {
       title: 'Main Function',
       detail: 'Responsive webpage, easy to extend with reusable components',
     },
-    list2: {
+    list3: {
       title: 'GitHub',
       detail: 'https://github.com/hjqueeen/portfoloi',
     },
-    list3: {
+    list4: {
       title: 'Frontend',
       detail: 'React, TypeScript, Sass, Mui, Zustand',
     },

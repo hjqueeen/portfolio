@@ -1,5 +1,5 @@
 .text-card {
-  @apply rounded-xl shadow-xl p-6 mx-8 mt-10 mb-4;
+  @apply rounded-xl shadow-xl p-4 mx-8 my-4;
   &-title {
     // underline underline-offset-2
     @apply text-lg italic flex flex-col items-center
@@ -7,6 +7,12 @@
   }
   &-image {
     @apply w-full rounded-lg mt-4;
+  }
+}
+.skill-items {
+  @apply flex flex-col;
+  &-button {
+    @apply m-1;
   }
 }
 

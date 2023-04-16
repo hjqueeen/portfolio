@@ -22,6 +22,10 @@ export interface AppTranslations {
       title: string;
       detail: string;
     };
+    list4: {
+      title: string;
+      detail: string;
+    };
   };
   project2: {
     title: string;

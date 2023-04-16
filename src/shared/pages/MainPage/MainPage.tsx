@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
+import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 
 // Icons
@@ -20,8 +21,6 @@ import { useBreakpoints } from '../../hooks/use-breakpoints.hook';
 
 // Styles
 import styles from './MainPage.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState } from 'react';
 
 type MainPageProps = {
   bgColor?: string;
@@ -33,12 +32,15 @@ const MainPage = (props: MainPageProps) => {
 
   const [showIcons, setShowIcons] = useState<boolean>(true);
 
-  // useEffect(() => {
-  //   smUp ? setShowIcons(true) : setShowIcons(false);
-  // }, [smUp]);
+  const mainPage = useRef<null | HTMLDivElement>(null);
+
+  // Scroll to Top on mount
+  useEffect(() => {
+    mainPage.current && mainPage.current.scrollIntoView();
+  }, []);
 
   return (
-    <Box className={styles['main-page']}>
+    <Box className={styles['main-page']} ref={mainPage}>
       {/* Header */}
       <Box className={styles['header']}>
         <Box className={styles['header-content']}>

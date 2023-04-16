@@ -26,5 +26,6 @@ export type ProjectType = {
   lists: {
     title: DefaultTFuncReturn | string;
     detail: DefaultTFuncReturn | string;
+    link?: boolean;
   }[];
 };
