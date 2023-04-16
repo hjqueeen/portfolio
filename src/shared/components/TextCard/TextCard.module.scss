@@ -6,7 +6,8 @@
     lg:text-2xl;
   }
   &-image {
-    @apply w-full rounded-lg mt-4;
+    @apply rounded-lg mt-4;
+    width: 100%;
   }
 }
 .skill-items {

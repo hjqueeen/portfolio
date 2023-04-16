@@ -1,8 +1,9 @@
 .intro {
   @apply relative;
   &-background {
-    @apply w-full absolute;
+    @apply absolute;
     background: '#f3e9ea';
+    width: 100%;
   }
   &-image {
     @apply h-1/3

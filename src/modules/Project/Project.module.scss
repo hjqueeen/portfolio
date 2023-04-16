@@ -1,8 +1,10 @@
 .project-card {
-  @apply flex flex-col w-full rounded-xl shadow-xl mt-5 pb-5
+  @apply flex flex-col rounded-xl shadow-xl mt-5 pb-5
   sm:p-5;
+  width: 100%;
   &-header {
-    @apply flex flex-col items-center w-full;
+    @apply flex flex-col items-center;
+    width: 100%;
     &-title {
       @apply font-extrabold my-3 text-xl
       sm:text-3xl;
@@ -18,38 +20,62 @@
   @apply flex flex-col px-2
   sm:flex-row sm:px-6;
   &-slider {
-    @apply w-full mr-2 border h-fit
-    sm:w-1/3 lg:w-1/3;
+    @apply mr-2 border h-fit
+    width: 100%;
   }
   &-main {
-    @apply w-full flex flex-col items-start pl-2 pt-4
-    sm:w-2/3 sm:pl-4 sm:pt-0 lg:w-2/3;
+    @apply flex flex-col items-start pl-2 pt-4
+    sm:pl-4 sm:pt-0;
+    width: 100%;
     &-description {
-      @apply w-full;
+      width: 100%;
       &-text {
-        @apply mb-2 w-full max-w-full break-words text-sm
+        @apply mb-2 break-words text-sm
         sm:text-lg;
+        width: 100%;
+        max-width: 100%;
       }
       &-button {
-        @apply my-2 pr-4 w-full;
+        @apply my-2 pr-4;
+        width: 100%;
       }
       &-divider {
-        @apply h-4 border-0 border-b border-solid w-full mt-2 mb-6;
+        @apply h-4 border-0 border-b border-solid mt-2 mb-6;
+        width: 100%;
       }
       &-list {
-        @apply w-full flex flex-row my-1;
+        @apply flex flex-row my-1;
+        width: 100%;
         &-title {
-          @apply w-1/3 flex flex-row mr-2;
+          @apply flex flex-row mr-2;
+          width: 33.333333%;
           &-text {
             @apply px-2 font-semibold text-xs grow
             sm:font-bold sm:text-base;
           }
         }
         &-detail {
-          @apply w-2/3 pl-2 text-xs break-words
+          @apply pl-2 text-xs break-words
           sm:text-base;
+          width: 66.666667%;
         }
       }
     }
+  }
+}
+
+@media (min-width: 640px) {
+  .content-slider {
+    width: 66.666667%;
+  }
+
+  .content-main {
+    width: 66.666667%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-main {
+    width: 66.666667%;
   }
 }

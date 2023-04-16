@@ -8,23 +8,28 @@
 
 .scroll {
   &-container {
-    @apply flex w-full;
+    @apply flex;
+    width: 100%;
   }
   &-background {
     @apply relative;
     &-image {
-      @apply absolute w-full;
+      @apply absolute;
+      width: 100%;
     }
   }
 }
 
 .background {
-  @apply absolute object-none object-top w-full h-full opacity-70 -z-40 bg-clip-padding;
+  @apply absolute object-none object-top h-full opacity-70 -z-40 bg-clip-padding;
+  width: 100%;
 }
 
 .content-container {
-  @apply w-full mx-auto max-w-6xl h-full flex flex-col items-center justify-between p-4 py-8
+  @apply mx-auto h-full flex flex-col items-center justify-between p-4 py-8
   lg:p-16;
+  width: 100%;
+  max-width: 72rem /* 1152px */;
   &-header {
     @apply flex flex-col items-center;
   }
@@ -43,6 +48,7 @@
     color: 'app.gray.light';
   }
   &-divider {
-    @apply w-20 mt-3 border-0 border-b-2 border-solid;
+    @apply mt-3 border-0 border-b-2 border-solid;
+    width: 5rem /* 80px */;
   }
 }
