@@ -82,7 +82,6 @@ const Project = (props: ProjectProps) => {
     <ScrollContainer
       name={props.scrollTo}
       bgColor="app.purple"
-      heightFit
       title={t('app.intro.title')}
       textColor="white"
       iconColor="white"

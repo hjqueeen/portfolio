@@ -25,7 +25,7 @@ export const appTranslationsEN: AppTranslations = {
     },
     list3: {
       title: 'GitHub',
-      detail: 'https://github.com/hjqueeen/code_portfolio',
+      detail: 'https://github.com/hjqueeen/portfolio',
     },
     list4: {
       title: 'Frontend',

@@ -14,7 +14,6 @@ type ScrollContainerProps = {
   children: ReactNode;
   classes?: string;
   heightClass?: string;
-  heightFit?: boolean;
   name: string;
   disableIcon?: boolean;
   disableTitleUnderline?: boolean;
@@ -31,11 +30,7 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
       <Element name={props.name}>
         <Box
           component="div"
-          className={clsx(
-            styles['scroll-container'],
-            props.heightFit ? styles['heightFit'] : styles['heightView'],
-            props.classes
-          )}
+          className={clsx(styles['scroll-container'], props.classes)}
           sx={{ backgroundColor: props.bgColor ?? undefined }}
         >
           <Box className={styles['content-container']}>
