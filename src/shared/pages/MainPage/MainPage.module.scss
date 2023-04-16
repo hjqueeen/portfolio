@@ -1,5 +1,5 @@
 .main-page {
-  @apply relative min-w-[280px] shrink-0;
+  @apply w-full relative min-w-[280px] shrink-0;
 }
 
 .header {
@@ -10,8 +10,9 @@
     sm:text-2xl md:text-3xl lg:text-4xl;
   }
   &-content {
-    @apply flex flex-col h-full justify-between items-end mx-auto w-full max-w-6xl p-1 align-middle
+    @apply flex flex-col h-full justify-between items-end mx-auto w-full p-1 align-middle
     sm:flex-row sm:p-2;
+    max-width: 72rem /* 1152px */;
     &-icons {
       @apply flex flex-row items-center mt-1;
       // transform: translateY(100%) !important;
@@ -36,4 +37,8 @@
 .header-title:hover:before {
   transition: all 0.1s ease-in-out;
   transform: translate(0, 2px);
+}
+
+.content {
+  @apply flex w-full;
 }

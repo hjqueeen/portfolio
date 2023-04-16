@@ -1,7 +1,6 @@
 import { Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Slider from 'react-slick';
 
 // Components
 import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';
@@ -11,7 +10,6 @@ import { TextButton } from '../../shared/components/TextButton/TextButton';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 // Assets
-import spring from '../../assets/3spring.png';
 import portfolio1 from '../../assets/project/portfolio/portfolio1.png';
 import portfolio2 from '../../assets/project/portfolio/portfolio2.png';
 import portfolio3 from '../../assets/project/portfolio/portfolio3.png';
@@ -79,14 +77,6 @@ const Project = (props: ProjectProps) => {
       ],
     },
   ];
-
-  const settings = {
-    // dots: true,
-    // // infinite: true,
-    // speed: 500,
-    // slidesToShow: 1,
-    // slidesToScroll: 1,
-  };
 
   return (
     <ScrollContainer

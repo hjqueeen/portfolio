@@ -1,11 +1,9 @@
-import { Box, Grid } from '@mui/material';
-import { Masonry } from '@mui/lab';
+import { Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 // Components
 import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';
 import { TextCard } from '../../shared/components/TextCard/TextCard';
-import { SkillButton } from '../../shared/components/SkillButton/SkillButton';
 
 // Hooks
 import { useBreakpoints } from '../../shared/hooks/use-breakpoints.hook';

@@ -3,18 +3,13 @@
 }
 
 .heightView {
-  @apply h-[calc(100vh-64px)];
+  // @apply h-[calc(100vh-64px)];
+  height: calc(100vh - 64px);
 }
 
 .scroll {
   &-container {
     @apply flex w-full;
-  }
-  &-background {
-    @apply relative;
-    &-image {
-      @apply absolute w-full;
-    }
   }
 }
 
@@ -23,8 +18,9 @@
 }
 
 .content-container {
-  @apply w-full mx-auto max-w-6xl h-full flex flex-col items-center justify-between p-4 py-8
+  @apply w-full mx-auto h-full flex flex-col items-center justify-between p-4 py-8
   lg:p-16;
+  max-width: 72rem /* 1152px */;
   &-header {
     @apply flex flex-col items-center;
   }
