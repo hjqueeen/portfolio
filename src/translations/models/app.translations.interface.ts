@@ -1,4 +1,7 @@
 export interface AppTranslations {
+  project: {
+    title: string;
+  };
   project1: {
     title: string;
     subtitle: string;
@@ -10,22 +13,10 @@ export interface AppTranslations {
       text5: string;
       text6: string;
     };
-    list1: {
-      title: string;
-      detail: string;
-    };
-    list2: {
-      title: string;
-      detail: string;
-    };
-    list3: {
-      title: string;
-      detail: string;
-    };
-    list4: {
-      title: string;
-      detail: string;
-    };
+    list1: FeatureItem;
+    list2: FeatureItem;
+    list3: FeatureItem;
+    list4: FeatureItem;
   };
   project2: {
     title: string;
@@ -38,18 +29,13 @@ export interface AppTranslations {
       text5: string;
       text6: string;
     };
-    list1: {
-      title: string;
-      detail: string;
-    };
-    list2: {
-      title: string;
-      detail: string;
-    };
-    list3: {
-      title: string;
-      detail: string;
-    };
+    list1: FeatureItem;
+    list2: FeatureItem;
+    list3: FeatureItem;
+    list4: FeatureItem;
+    list5: FeatureItem;
+    list6: FeatureItem;
+    list7: FeatureItem;
   };
   project3: {
     title: string;
@@ -62,18 +48,9 @@ export interface AppTranslations {
       text5: string;
       text6: string;
     };
-    list1: {
-      title: string;
-      detail: string;
-    };
-    list2: {
-      title: string;
-      detail: string;
-    };
-    list3: {
-      title: string;
-      detail: string;
-    };
+    list1: FeatureItem;
+    list2: FeatureItem;
+    list3: FeatureItem;
   };
   intro: {
     title: string;
@@ -126,3 +103,8 @@ export interface AppTranslations {
   };
   title: string;
 }
+
+export type FeatureItem = {
+  title: string;
+  detail: string;
+};

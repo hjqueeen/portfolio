@@ -1,6 +1,9 @@
 import { AppTranslations } from '../models/app.translations.interface';
 
 export const appTranslationsEN: AppTranslations = {
+  project: {
+    title: 'Project',
+  },
   project1: {
     title: 'Create a portfolio web page',
     subtitle: 'First personal project',
@@ -33,8 +36,9 @@ export const appTranslationsEN: AppTranslations = {
     },
   },
   project2: {
-    title: '',
-    subtitle: '',
+    title: '출고 관리 프로그램 개발',
+    subtitle:
+      '기존에 표준 없이 여러 곳에 분산되어 있던 출고 관련 데이터를 중앙에서 통합 관리하고, 반복적이고 수동으로 처리되던 업무를 자동화하여 업무 효율성을 극대화하기 위해 출고 관리 프로그램을 개발했습니다.',
     descriptions: {
       text1: '',
       text2: '',
@@ -44,16 +48,37 @@ export const appTranslationsEN: AppTranslations = {
       text6: '',
     },
     list1: {
-      title: '',
-      detail: '',
+      title: 'Development Goals',
+      detail:
+        'Establish a standardized and consistent data management system, automate repetitive tasks to reduce human error and increase productivity, and provide an intuitive interface that anyone can use easily.',
     },
     list2: {
-      title: '',
-      detail: '',
+      title: 'Database Construction',
+      detail:
+        'Organize and structure accumulated shipping data from the past 5 years into a comprehensive database.',
     },
     list3: {
-      title: '',
-      detail: '',
+      title: 'Search and Filtering',
+      detail:
+        'Enable data retrieval and filtering based on various conditions.',
+    },
+    list4: {
+      title: 'Barcode Processing',
+      detail:
+        'Replace manual input methods with barcode recognition to improve processing speed and accuracy.',
+    },
+    list5: {
+      title: 'Inspection Sheet Management',
+      detail: 'Provide functionality to print and store inspection sheets.',
+    },
+    list6: {
+      title: 'Automatic Notifications',
+      detail:
+        'Automatically send alerts when it is time for product upgrades or replacements.',
+    },
+    list7: {
+      title: 'Shipping Status Statistics',
+      detail: 'Visualize shipping status statistics by period and product.',
     },
   },
   project3: {

@@ -30,10 +30,10 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
       <Element name={props.name}>
         <Box
           component="div"
-          className={clsx(styles['scroll-container'], props.classes)}
+          className={styles['scroll-container']}
           sx={{ backgroundColor: props.bgColor ?? undefined }}
         >
-          <Box className={styles['content-container']}>
+          <Box className={clsx(styles['content-container'], props.classes)}>
             <Box className={styles['content-container-header']}>
               <Box className={styles['content-container-title']}>
                 {!props.disableIcon && (

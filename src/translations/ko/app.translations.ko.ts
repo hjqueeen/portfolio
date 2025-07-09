@@ -1,6 +1,9 @@
 import { AppTranslations } from '../models/app.translations.interface';
 
 export const appTranslationsKO: AppTranslations = {
+  project: {
+    title: 'Project',
+  },
   project1: {
     title: '포트폴리오 웹 페이지 만들기',
     subtitle: '첫번째 개인 프로젝트',
@@ -33,27 +36,49 @@ export const appTranslationsKO: AppTranslations = {
     },
   },
   project2: {
-    title: '',
-    subtitle: '',
+    title: '출고 관리 프로그램 개발',
+    subtitle: '출고 관리 프로그램',
     descriptions: {
-      text1: '',
-      text2: '',
-      text3: '',
+      text1:
+        '기존에 여러 곳에 분산되어 있던 출고 관련 데이터를 중앙에서 통합 관리하고, 반복적이고 수동으로 처리되던 업무를 자동화하여 업무 효율성을 극대화하기 위해 출고 관리 프로그램을 개발했습니다.',
+      text2: '반복 업무 자동화로 인적 오류 감소 및 생산성 향상',
+      text3: '사용자 누구나 쉽게 사용할 수 있는 직관적 인터페이스 제공',
       text4: '',
       text5: '',
       text6: '',
     },
     list1: {
-      title: '',
-      detail: '',
+      title: '개발 목표',
+      detail:
+        '데이터 표준화 및 일관된 관리 체계 구축, 반복 업무 자동화로 인적 오류 감소 및 생산성 향상, 사용자 누구나 쉽게 사용할 수 있는 직관적 인터페이스 제공',
     },
+
     list2: {
-      title: '',
-      detail: '',
+      title: '주요 기능',
+      detail:
+        '데이터베이스 구축, 데이터 검색 및 필터링, 바코드 처리, 검사지 출력 및 저장 기능, 자동 알림, 출고 현황 통계',
     },
     list3: {
-      title: '',
-      detail: '',
+      title: '기술스택',
+      detail:
+        'Figma, React, TypeScript, Tailwind CSS, NestJS, TypeORM, PostgreSQL',
+    },
+    list4: {
+      title: 'Design Draft',
+      detail: 'http://bit.ly/4kqY1ks',
+    },
+
+    list5: {
+      title: '프론트엔드 코드',
+      detail: 'https://github.com/hjqueeen/mycu_frontend',
+    },
+    list6: {
+      title: '백엔드 코드',
+      detail: 'https://github.com/hjqueeen/mycu_backend',
+    },
+    list7: {
+      title: '출고 현황 통계',
+      detail: '기간별·제품별 출고 현황을 시각화하여 통계 제공',
     },
   },
   project3: {

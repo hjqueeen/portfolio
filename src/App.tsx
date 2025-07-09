@@ -29,9 +29,9 @@ function App() {
     //   i18n.changeLanguage('ko');
     //   document.documentElement.setAttribute('lang', 'ko');
     // } else {
-    console.log('en');
-    i18n.changeLanguage('en');
-    document.documentElement.setAttribute('lang', 'en');
+    console.log('ko');
+    i18n.changeLanguage('ko');
+    document.documentElement.setAttribute('lang', 'ko');
     // }
   }, []);
 

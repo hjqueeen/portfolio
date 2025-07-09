@@ -10,10 +10,16 @@ import { TextButton } from '../../shared/components/TextButton/TextButton';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 // Assets
-import portfolio1 from '../../assets/project/portfolio/portfolio1.png';
-import portfolio2 from '../../assets/project/portfolio/portfolio2.png';
-import portfolio3 from '../../assets/project/portfolio/portfolio3.png';
-import portfolio4 from '../../assets/project/portfolio/portfolio4.png';
+import portfolio1 from '../../assets/project/portfolio1/portfolio1.png';
+import portfolio2 from '../../assets/project/portfolio1/portfolio2.png';
+import portfolio3 from '../../assets/project/portfolio1/portfolio3.png';
+import portfolio4 from '../../assets/project/portfolio1/portfolio4.png';
+
+import project2_1 from '../../assets/project/project2/project2_1.png';
+import project2_2 from '../../assets/project/project2/project2_2.png';
+import project2_3 from '../../assets/project/project2/project2_3.png';
+import project2_4 from '../../assets/project/project2/project2_4.png';
+import project2_5 from '../../assets/project/project2/project2_5.png';
 
 // Models
 import { ProjectType } from '../../shared/models/shared.types';
@@ -76,15 +82,76 @@ const Project = (props: ProjectProps) => {
         },
       ],
     },
+    {
+      title: t('app.project2.title'),
+      subtitle: t('app.project2.subtitle'),
+      imgs: [
+        {
+          src: project2_1,
+          alt: 'project2_1',
+        },
+        {
+          src: project2_2,
+          alt: 'project2_2',
+        },
+        {
+          src: project2_3,
+          alt: 'project2_3',
+        },
+        {
+          src: project2_4,
+          alt: 'project2_4',
+        },
+        {
+          src: project2_5,
+          alt: 'project2_5',
+        },
+      ],
+      descriptions: [
+        t('app.project2.descriptions.text1'),
+        // t('app.project2.descriptions.text2'),
+        // t('app.project2.descriptions.text3'),
+      ],
+      lists: [
+        {
+          title: t('app.project2.list1.title'),
+          detail: t('app.project2.list1.detail'),
+        },
+        {
+          title: t('app.project2.list2.title'),
+          detail: t('app.project2.list2.detail'),
+        },
+        {
+          title: t('app.project2.list3.title'),
+          detail: t('app.project2.list3.detail'),
+        },
+        {
+          title: t('app.project2.list4.title'),
+          detail: t('app.project2.list4.detail'),
+          link: true,
+        },
+        {
+          title: t('app.project2.list5.title'),
+          detail: t('app.project2.list5.detail'),
+          link: true,
+        },
+        {
+          title: t('app.project2.list6.title'),
+          detail: t('app.project2.list6.detail'),
+          link: true,
+        },
+      ],
+    },
   ];
 
   return (
     <ScrollContainer
       name={props.scrollTo}
       bgColor="app.purple"
-      title={t('app.intro.title')}
+      title={t('app.project.title')}
       textColor="white"
       iconColor="white"
+      classes="gap-10"
     >
       {project_items.map((item, index) => (
         <Box
@@ -129,8 +196,8 @@ const Project = (props: ProjectProps) => {
                     bgcolor: 'white',
                   },
                 }}
-                src={portfolio1}
-                alt="portfolio1"
+                src={item.imgs[0].src}
+                alt={item.imgs[0].alt}
               />
             </Box>
             <Box className={styles['content-main']}>
