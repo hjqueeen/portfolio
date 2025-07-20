@@ -37,9 +37,9 @@ const breakpoints = {
   },
 };
 const app = {
-  pink: '#FF7767',
-  purple: '#555FDA',
-  orange: '#FF9E71',
+  pink: '#954C2E',
+  purple: '#131D4F',
+  orange: '#A4D65E',
   gray: {
     dark: '#444444',
     light: '#625E79',

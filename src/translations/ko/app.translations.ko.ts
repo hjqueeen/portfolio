@@ -8,8 +8,7 @@ export const appTranslationsKO: AppTranslations = {
     title: '포트폴리오 웹 페이지 만들기',
     subtitle: '첫번째 개인 프로젝트',
     descriptions: {
-      text1:
-        'React 를 활용하여 포트폴리오용 웹페이지를 제작하였습니다. 지금 보고 있는 바로 이 웹페이지입니다.',
+      text1: 'React 를 활용하여 포트폴리오용 웹페이지를 제작하였습니다.',
       text2:
         '설계부터 구현, 배포까지 직접 만들어 보면서 지금까지 배운 내용을 실전에서 활용할 수 있었습니다.',
       text3: '',
@@ -18,26 +17,27 @@ export const appTranslationsKO: AppTranslations = {
       text6: '',
     },
     list1: {
-      title: 'Design Draft',
-      detail:
-        'https://xd.adobe.com/view/9ca42e05-4621-4844-b961-0a7c3af67053-c9f7/',
-    },
-    list2: {
       title: '주요 기능',
       detail: '반응형 웹페이지, 재사용가능한 컴포넌트로 확장이 용이',
     },
+    list2: {
+      title: '기술스택',
+      detail: 'React, TypeScript, Sass, Mui, Zustand',
+    },
     list3: {
-      title: 'GitHub',
-      detail: 'https://github.com/hjqueeen/portfolio',
+      title: '디자인 초안',
+      detail:
+        'https://xd.adobe.com/view/9ca42e05-4621-4844-b961-0a7c3af67053-c9f7/',
     },
     list4: {
-      title: 'Frontend',
-      detail: 'React, TypeScript, Sass, Mui, Zustand',
+      title: '프론트엔드 코드',
+      detail: 'https://github.com/hjqueeen/portfolio',
     },
   },
   project2: {
     title: '출고 관리 프로그램 개발',
-    subtitle: '출고 관리 프로그램',
+    subtitle:
+      '데이터를 표준화·자동화하여 효율적 관리와 정확성을 높인 통합 출고관리 시스템 개발',
     descriptions: {
       text1:
         '기존에 여러 곳에 분산되어 있던 출고 관련 데이터를 중앙에서 통합 관리하고, 반복적이고 수동으로 처리되던 업무를 자동화하여 업무 효율성을 극대화하기 위해 출고 관리 프로그램을 개발했습니다.',
@@ -64,7 +64,7 @@ export const appTranslationsKO: AppTranslations = {
         'Figma, React, TypeScript, Tailwind CSS, NestJS, TypeORM, PostgreSQL',
     },
     list4: {
-      title: 'Design Draft',
+      title: '디자인 초안',
       detail: 'http://bit.ly/4kqY1ks',
     },
 

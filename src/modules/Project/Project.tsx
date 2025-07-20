@@ -65,7 +65,6 @@ const Project = (props: ProjectProps) => {
         {
           title: t('app.project1.list1.title'),
           detail: t('app.project1.list1.detail'),
-          link: true,
         },
         {
           title: t('app.project1.list2.title'),
@@ -79,6 +78,7 @@ const Project = (props: ProjectProps) => {
         {
           title: t('app.project1.list4.title'),
           detail: t('app.project1.list4.detail'),
+          link: true,
         },
       ],
     },

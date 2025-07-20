@@ -22,15 +22,18 @@ export const UserCard = (props: UserCardProps) => {
       <FontAwesomeIcon
         className={styles['user-card-icon']}
         icon={props.icon}
-        style={{ color: 'white', fontSize: lgDown ? '20px' : '25px' }}
+        style={{ color: '#444444', fontSize: lgDown ? '20px' : '25px' }}
       />
-      <Box className={styles['user-card-content']} sx={{ color: 'white' }}>
+      <Box
+        className={styles['user-card-content']}
+        sx={{ color: 'app.gray.dark' }}
+      >
         <Box
           className={styles['user-card-content-title']}
           sx={{
             '::selection': {
               color: 'white',
-              bgcolor: 'app.purple',
+              bgcolor: 'app.orange',
             },
           }}
         >
@@ -41,7 +44,7 @@ export const UserCard = (props: UserCardProps) => {
           sx={{
             '::selection': {
               color: 'white',
-              bgcolor: 'app.purple',
+              bgcolor: 'app.orange',
             },
           }}
         >

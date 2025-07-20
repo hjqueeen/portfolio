@@ -73,7 +73,7 @@ export const SkillButton = (props: SkillButtonProps) => {
           sxPreset = {
             color: 'app.purple',
             bgcolor: 'white',
-            border: '#555FDA 1px solid',
+            border: '#131D4F 1px solid',
             '&:hover': {
               color: 'white',
               bgcolor: 'app.purple',

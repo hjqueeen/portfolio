@@ -42,7 +42,7 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
                     icon={faLink}
                     style={{
                       color: props.iconColor ? props.iconColor : '#5B6A7B',
-                      // color: '#FF7767',
+                      // color: '#954C2E',
                       fontSize: 'large',
                     }}
                   />

@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 
 // Assets
 import developer from '../../assets/programmiererin.png';
+import hjkim2 from '../../assets/hjkim2.png';
 
 // Components
 import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollContainer';

@@ -32,23 +32,23 @@ const AboutMe = (props: AboutMeProps) => {
   return (
     <ScrollContainer
       name={props.scrollTo}
-      bgColor="black"
+      bgColor='#dddddd'
       title={t('app.introduction.title')}
-      textColor="white"
-      iconColor="#625E79"
-      selectionColor="app.purple"
+      textColor='app.purple'
+      iconColor='#625E79'
+      selectionColor='app.orange'
     >
       <Box className={styles['introduction-profile']}>
         <Box className={styles['introduction-profile-detail']}>
           <Box
-            className={styles['introduction-profile-detail-text']}
+            className='pt-8'
             sx={{
               color: 'app.pink',
               fontSize: smDown ? '18px' : '25px',
               fontWeight: 700,
               '::selection': {
                 color: 'white',
-                bgcolor: 'app.purple',
+                bgcolor: 'app.orange',
               },
             }}
           >
@@ -59,11 +59,11 @@ const AboutMe = (props: AboutMeProps) => {
               key={index}
               className={styles['introduction-profile-detail-text']}
               sx={{
-                color: 'white',
+                color: 'app.gray.dark',
                 fontSize: smDown ? '12px' : '18px',
                 '::selection': {
                   color: 'white',
-                  bgcolor: 'app.purple',
+                  bgcolor: 'app.orange',
                 },
               }}
             >
@@ -71,7 +71,7 @@ const AboutMe = (props: AboutMeProps) => {
             </Box>
           ))}
         </Box>
-        {!smDown && (
+        {/* {!smDown && (
           <Box
             component="img"
             className={styles['introduction-profile-image']}
@@ -84,7 +84,7 @@ const AboutMe = (props: AboutMeProps) => {
               },
             }}
           />
-        )}
+        )} */}
       </Box>
       <Box className={styles['introduction']}>
         <Box className={styles['introduction-row']}>
@@ -102,6 +102,11 @@ const AboutMe = (props: AboutMeProps) => {
             icon={faLocationDot}
             title={t('app.introduction.address')}
             subtitle={t('app.introduction.address_detail')}
+          />
+          <UserCard
+            icon={faLocationDot}
+            title={t('app.introduction.education')}
+            subtitle={t('app.introduction.education_detail')}
           />
         </Box>
         {/* <Box className={styles['introduction-row']}>
