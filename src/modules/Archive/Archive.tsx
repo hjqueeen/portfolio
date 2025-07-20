@@ -8,6 +8,7 @@ import { ImageCard } from '../../shared/components/ImageCard/ImageCard';
 // Assets
 import github from '../../assets/GitHub_Logo.png';
 import velog from '../../assets/velog.png';
+import brunch from '../../assets/brunch_logo.png';
 
 // Styles
 import styles from './Archive.module.scss';
@@ -33,6 +34,13 @@ const Archive = (props: ArchiveProps) => {
       text1: t('app.archive.website.description.text1'),
       text2: t('app.archive.website.description.text2'),
     },
+    {
+      titleImg: brunch,
+      address: t('app.archive.brunch.address'),
+      datail: t('app.archive.brunch.description.detail'),
+      text1: t('app.archive.brunch.description.text1'),
+      text2: t('app.archive.brunch.description.text2'),
+    },
   ];
   return (
     <ScrollContainer
@@ -46,72 +54,88 @@ const Archive = (props: ArchiveProps) => {
       <Box className={styles['archive-container']}>
         <Box className={styles['archive']}>
           {archive_item.map((item, index) => (
-            <ImageCard
-              key={index}
-              titleImg={item.titleImg}
-              titleImgAlt='image_github'
-            >
-              <Box
-                className={styles['archive-address']}
-                sx={{
-                  '::selection': {
-                    color: 'white',
-                    bgcolor: 'app.purple',
-                  },
-                }}
-              >
-                {item.address}
+            <Box className={styles['img-card']} sx={{ bgcolor: 'white' }}>
+              <Box className={styles['img-card-title']}>
+                <Box
+                  component='img'
+                  className={styles['img-card-image']}
+                  src={item.titleImg}
+                  alt={item.address}
+                  sx={{
+                    '::selection': {
+                      color: 'white',
+                      bgcolor: 'app.purple',
+                    },
+                  }}
+                />
               </Box>
               <Box
-                className={styles['archive-detail']}
                 sx={{
-                  color: 'app.brown',
-                  '::selection': {
-                    color: 'white',
-                    bgcolor: 'app.purple',
-                  },
-                }}
-              >
-                {item.datail}
-              </Box>
-              <Box
-                component='ul'
-                className={styles['archive-detail-ul']}
-                sx={{
-                  '::selection': {
-                    color: 'white',
-                    bgcolor: 'app.purple',
-                  },
+                  color: 'app.gray.dark',
                 }}
               >
                 <Box
-                  component='li'
-                  className={styles['archive-detail-li']}
+                  className={styles['archive-address']}
                   sx={{
-                    listStyleType: 'disc',
                     '::selection': {
                       color: 'white',
                       bgcolor: 'app.purple',
                     },
                   }}
                 >
-                  {item.text1}
+                  {item.address}
                 </Box>
                 <Box
-                  component='li'
-                  className={styles['archive-detail-li']}
+                  className={styles['archive-detail']}
                   sx={{
-                    listStyleType: 'disc',
+                    color: 'app.brown',
                     '::selection': {
                       color: 'white',
                       bgcolor: 'app.purple',
                     },
                   }}
                 >
-                  {item.text2}
+                  {item.datail}
+                </Box>
+                <Box
+                  component='ul'
+                  className={styles['archive-detail-ul']}
+                  sx={{
+                    '::selection': {
+                      color: 'white',
+                      bgcolor: 'app.purple',
+                    },
+                  }}
+                >
+                  <Box
+                    component='li'
+                    className={styles['archive-detail-li']}
+                    sx={{
+                      listStyleType: 'disc',
+                      '::selection': {
+                        color: 'white',
+                        bgcolor: 'app.purple',
+                      },
+                    }}
+                  >
+                    {item.text1}
+                  </Box>
+                  <Box
+                    component='li'
+                    className={styles['archive-detail-li']}
+                    sx={{
+                      listStyleType: 'disc',
+                      '::selection': {
+                        color: 'white',
+                        bgcolor: 'app.purple',
+                      },
+                    }}
+                  >
+                    {item.text2}
+                  </Box>
                 </Box>
               </Box>
-            </ImageCard>
+            </Box>
           ))}
         </Box>
       </Box>

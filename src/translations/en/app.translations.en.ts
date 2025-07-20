@@ -163,6 +163,15 @@ export const appTranslationsEN: AppTranslations = {
         text3: '',
       },
     },
+    brunch: {
+      address: 'https://brunch.co.kr/@8d9b6f7cb5ef452',
+      description: {
+        detail: 'A record of everyday life in Germany',
+        text1:
+          'This blog captures the honest and heartwarming stories of a family of four living in Germany.',
+        text2: 'A personal essay from the perspective of an immigran',
+      },
+    },
   },
   title: "HJK's Portfolio",
 };

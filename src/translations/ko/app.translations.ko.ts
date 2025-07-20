@@ -161,6 +161,15 @@ export const appTranslationsKO: AppTranslations = {
         text3: '',
       },
     },
+    brunch: {
+      address: 'https://brunch.co.kr/@8d9b6f7cb5ef452',
+      description: {
+        detail: '독일에서 살아가는 일상의 기록',
+        text1:
+          '4인 가족이 독일에서 겪는 소소하고 진솔한 이야기들을 담은 블로그입니다.',
+        text2: '이민자의 시선으로 풀어낸 생활 에세이',
+      },
+    },
   },
   title: "HJK's Portfolio",
 };
