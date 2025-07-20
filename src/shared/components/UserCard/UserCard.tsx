@@ -13,6 +13,7 @@ type UserCardProps = {
   icon: IconDefinition;
   title: DefaultTFuncReturn | string;
   subtitle: DefaultTFuncReturn | string;
+  more?: DefaultTFuncReturn | string;
 };
 
 export const UserCard = (props: UserCardProps) => {
@@ -50,6 +51,19 @@ export const UserCard = (props: UserCardProps) => {
         >
           {props.subtitle}
         </Box>
+        {props.more && (
+          <Box
+            className={styles['user-card-content-subtitle']}
+            sx={{
+              '::selection': {
+                color: 'white',
+                bgcolor: 'app.orange',
+              },
+            }}
+          >
+            {props.more}
+          </Box>
+        )}
       </Box>
     </Box>
   );

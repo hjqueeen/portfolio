@@ -114,18 +114,23 @@ export const appTranslationsEN: AppTranslations = {
     title: 'ABOUT ME',
     name: 'Name',
     name_detail: 'Hyejin Kim',
+    birthday: 'Birthday',
+    birthday_detail: '86.01.27',
+    contact: 'Contact',
+    contact_detail: '+49-17-9439-7891',
     education: 'Education',
     education_detail:
       'Seoul National University(Department of Biosystem Engineering)',
+    education_detail_more: 'HWR Berlin(Informatik)',
     email: 'Email',
     email_detail: 'hjqueeen@gmail.com',
     address: 'Address',
     address_detail: 'Berlin, Germany',
     profile: {
-      text1: 'Hello. I am a , ',
-      text2: 'developer who is still evolving.',
+      text1: 'Hello, I am ',
+      text2: 'a developer who is constantly learning and growing.',
       text3:
-        'person who perseveres through difficult tasks and takes responsibility for the tasks assigned to me.',
+        'I am someone who takes responsibility and finds solutions even in the face of challenges.',
     },
   },
   skill: {

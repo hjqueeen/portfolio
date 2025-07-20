@@ -4,6 +4,7 @@ import {
   faUser,
   faEnvelope,
   faLocationDot,
+  faPen,
 } from '@fortawesome/free-solid-svg-icons';
 
 // Components
@@ -94,29 +95,34 @@ const AboutMe = (props: AboutMeProps) => {
             subtitle={t('app.introduction.name_detail')}
           />
           <UserCard
-            icon={faEnvelope}
-            title={t('app.introduction.email')}
-            subtitle={t('app.introduction.email_detail')}
+            icon={faLocationDot}
+            title={t('app.introduction.birthday')}
+            subtitle={t('app.introduction.birthday_detail')}
           />
           <UserCard
             icon={faLocationDot}
             title={t('app.introduction.address')}
             subtitle={t('app.introduction.address_detail')}
           />
+        </Box>
+        <Box className={styles['introduction-row']}>
           <UserCard
             icon={faLocationDot}
+            title={t('app.introduction.contact')}
+            subtitle={t('app.introduction.contact_detail')}
+          />
+          <UserCard
+            icon={faEnvelope}
+            title={t('app.introduction.email')}
+            subtitle={t('app.introduction.email_detail')}
+          />
+          <UserCard
+            icon={faPen}
             title={t('app.introduction.education')}
             subtitle={t('app.introduction.education_detail')}
+            more={t('app.introduction.education_detail_more')}
           />
         </Box>
-        {/* <Box className={styles['introduction-row']}>
-          
-             <UserCard
-              icon={faPen}
-              title={t('app.introduction.education')}
-              subtitle={t('app.introduction.education_detail')}
-            /> 
-          </Box>*/}
       </Box>
     </ScrollContainer>
   );

@@ -1,13 +1,13 @@
 .user-card {
-  @apply flex flex-row items-center w-fit my-1;
+  @apply flex flex-row items-start w-96 my-1;
 
   &-icon {
-    @apply w-10;
+    @apply w-10 pt-2;
   }
   &-content {
     @apply ml-6;
     &-title {
-      @apply text-sm
+      @apply text-sm font-semibold
       lg:text-base;
     }
     &-subtitle {

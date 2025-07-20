@@ -38,81 +38,52 @@ const Career = (props: CareerProps) => {
       iconColor='#625E79'
       selectionColor='app.purple'
     >
-      <Box className={styles['introduction-career']}>
-        <Box className={styles['introduction-career-detail']}>
-          <Box
-            className={styles['introduction-career-detail-text']}
-            sx={{
-              color: 'app.pink',
-              fontSize: smDown ? '18px' : '25px',
-              fontWeight: 700,
-              '::selection': {
-                color: 'white',
-                bgcolor: 'app.purple',
-              },
-            }}
-          >
-            {t('app.introduction.profile.text1')}
-          </Box>
-          {profile_texts.map((text, index) => (
-            <Box
-              key={index}
-              className={styles['introduction-career-detail-text']}
-              sx={{
-                color: 'white',
-                fontSize: smDown ? '12px' : '18px',
-                '::selection': {
-                  color: 'white',
-                  bgcolor: 'app.purple',
-                },
-              }}
-            >
-              {text}
-            </Box>
-          ))}
-        </Box>
-        {!smDown && (
-          <Box
-            component='img'
-            className={styles['introduction-career-image']}
-            src={hjkim2}
-            alt='profile_logo'
-            sx={{
-              '::selection': {
-                color: 'app.purple',
-                bgcolor: 'white',
-              },
-            }}
-          />
-        )}
-      </Box>
-      <Box className={styles['introduction']}>
-        <Box className={styles['introduction-row']}>
-          <UserCard
-            icon={faUser}
-            title={t('app.introduction.name')}
-            subtitle={t('app.introduction.name_detail')}
-          />
-          <UserCard
-            icon={faEnvelope}
-            title={t('app.introduction.email')}
-            subtitle={t('app.introduction.email_detail')}
-          />
-          <UserCard
-            icon={faLocationDot}
-            title={t('app.introduction.address')}
-            subtitle={t('app.introduction.address_detail')}
-          />
-        </Box>
-        {/* <Box className={styles['introduction-row']}>
-          
-             <UserCard
-              icon={faPen}
-              title={t('app.introduction.education')}
-              subtitle={t('app.introduction.education_detail')}
-            /> 
-          </Box>*/}
-      </Box>
+      <div className='bg-white shadow-md rounded-2xl p-6 space-y-4 max-w-3xl mx-auto'>
+        <h2 className='text-xl font-bold text-gray-800'>
+          🐧 펭귄(Penguin) – 프론트엔드 & 백엔드 개발자
+        </h2>
+        <p className='text-sm text-gray-500'>근무 기간: (직접 입력)</p>
+
+        <ul className='list-disc list-inside space-y-2 text-gray-700'>
+          <li>
+            <strong className='font-semibold'>
+              홈페이지 성능 개선 및 유지보수:
+            </strong>{' '}
+            React 구조 최적화 및 코드 스플리팅을 통해 페이지 로딩 속도 약 30%
+            개선
+          </li>
+          <li>
+            <strong className='font-semibold'>UI/UX 전면 개편:</strong> 최신
+            디자인 반영 및 반응형 웹 재설계, 컴포넌트 기반 구조 정비
+          </li>
+          <li>
+            <strong className='font-semibold'>
+              사용자 피드백 기반 기능 개발:
+            </strong>{' '}
+            게시판, 즐겨찾기, 검색 필터 등 신규 기능 기획 및 구현
+          </li>
+          <li>
+            <strong className='font-semibold'>버그 및 이슈 해결:</strong> 운영
+            중 발생한 다양한 UI/UX 이슈 해결 및 품질 안정화
+          </li>
+          <li>
+            <strong className='font-semibold'>백엔드 연동 및 개발:</strong>{' '}
+            NestJS + TypeORM 기반 간단한 CRUD API 개발 및 PostgreSQL 쿼리 작성
+          </li>
+          <li>
+            <strong className='font-semibold'>협업과 관리:</strong> Git, Jira,
+            Slack을 통한 이슈 관리 및 팀 간 협업 경험
+          </li>
+        </ul>
+
+        <div className='pt-2'>
+          <p className='font-medium text-gray-800'>🛠 사용 기술</p>
+          <p className='text-sm text-gray-600'>
+            React, TypeScript, JavaScript, Tailwind CSS, NestJS, TypeORM,
+            PostgreSQL, Git, Figma, Jira
+          </p>
+        </div>
+      </div>
     </ScrollContainer>
   );
 };

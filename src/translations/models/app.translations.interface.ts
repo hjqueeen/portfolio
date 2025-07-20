@@ -61,8 +61,13 @@ export interface AppTranslations {
     title: string;
     name: string;
     name_detail: string;
+    birthday: string;
+    birthday_detail: string;
+    contact: string;
+    contact_detail: string;
     education: string;
     education_detail: string;
+    education_detail_more: string;
     email: string;
     email_detail: string;
     address: string;

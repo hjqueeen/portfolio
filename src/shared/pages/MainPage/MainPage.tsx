@@ -21,6 +21,7 @@ import { useBreakpoints } from '../../hooks/use-breakpoints.hook';
 
 // Styles
 import styles from './MainPage.module.scss';
+import Career from '../../../modules/Career/Career';
 
 type MainPageProps = {
   bgColor?: string;
@@ -56,7 +57,7 @@ const MainPage = (props: MainPageProps) => {
                 fontFamily: 'Montserrat',
               }}
             >
-              <Link to="intro" spy={true} offset={-100}>
+              <Link to='intro' spy={true} offset={-100}>
                 {t('app.title')}
               </Link>
               {/* {!smUp && (
@@ -82,10 +83,11 @@ const MainPage = (props: MainPageProps) => {
                   // , styles['show']
                 )}
               >
-                <ScrollLink to="AboutMe">About me</ScrollLink>
-                <ScrollLink to="skill">Skills</ScrollLink>
-                <ScrollLink to="Archive">Archiving</ScrollLink>
-                <ScrollLink to="project">Projects</ScrollLink>
+                <ScrollLink to='AboutMe'>About me</ScrollLink>
+                <ScrollLink to='Career'>Career</ScrollLink>
+                <ScrollLink to='skill'>Skills</ScrollLink>
+                <ScrollLink to='Archive'>Archiving</ScrollLink>
+                <ScrollLink to='project'>Projects</ScrollLink>
                 {/* <ScrollLink to="career">Career</ScrollLink> */}
               </Box>
             )}
@@ -97,11 +99,12 @@ const MainPage = (props: MainPageProps) => {
 
       {/* Main Content */}
       <Box className={styles['content']}>
-        <Intro scrollTo="intro" />
-        <AboutMe scrollTo="AboutMe" />
-        <Skill scrollTo="skill" />
-        <Archive scrollTo="Archive" />
-        <Project scrollTo="project" />
+        <Intro scrollTo='intro' />
+        <AboutMe scrollTo='AboutMe' />
+        <Career scrollTo='Career' />
+        <Skill scrollTo='skill' />
+        <Archive scrollTo='Archive' />
+        <Project scrollTo='project' />
         {/* <Career scrollTo="career" /> */}
       </Box>
     </Box>
