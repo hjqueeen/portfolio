@@ -14,14 +14,14 @@ import { ScrollContainer } from '../../shared/components/ScrollContainer/ScrollC
 import hjkim2 from '../../assets/hjkim2.png';
 
 // Styles
-import styles from './Career.module.scss';
+import styles from './AboutMe.module.scss';
 import { useBreakpoints } from '../../shared/hooks/use-breakpoints.hook';
 
-type CareerProps = {
+type AboutMeProps = {
   scrollTo: string;
 };
 
-const Career = (props: CareerProps) => {
+const AboutMe = (props: AboutMeProps) => {
   const { smDown } = useBreakpoints();
   const { t } = useTranslation();
 
@@ -32,16 +32,16 @@ const Career = (props: CareerProps) => {
   return (
     <ScrollContainer
       name={props.scrollTo}
-      bgColor='black'
+      bgColor="black"
       title={t('app.introduction.title')}
-      textColor='white'
-      iconColor='#625E79'
-      selectionColor='app.purple'
+      textColor="white"
+      iconColor="#625E79"
+      selectionColor="app.purple"
     >
-      <Box className={styles['introduction-career']}>
-        <Box className={styles['introduction-career-detail']}>
+      <Box className={styles['introduction-profile']}>
+        <Box className={styles['introduction-profile-detail']}>
           <Box
-            className={styles['introduction-career-detail-text']}
+            className={styles['introduction-profile-detail-text']}
             sx={{
               color: 'app.pink',
               fontSize: smDown ? '18px' : '25px',
@@ -57,7 +57,7 @@ const Career = (props: CareerProps) => {
           {profile_texts.map((text, index) => (
             <Box
               key={index}
-              className={styles['introduction-career-detail-text']}
+              className={styles['introduction-profile-detail-text']}
               sx={{
                 color: 'white',
                 fontSize: smDown ? '12px' : '18px',
@@ -73,10 +73,10 @@ const Career = (props: CareerProps) => {
         </Box>
         {!smDown && (
           <Box
-            component='img'
-            className={styles['introduction-career-image']}
+            component="img"
+            className={styles['introduction-profile-image']}
             src={hjkim2}
-            alt='profile_logo'
+            alt="profile_logo"
             sx={{
               '::selection': {
                 color: 'app.purple',
@@ -117,4 +117,4 @@ const Career = (props: CareerProps) => {
   );
 };
 
-export default Career;
+export default AboutMe;

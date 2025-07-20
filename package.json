@@ -23,7 +23,7 @@
     "gh-pages": "^5.0.0",
     "i18next": "^22.4.14",
     "i18next-browser-languagedetector": "^7.0.1",
-    "node-sass": "^8.0.0",
+    "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^12.2.0",
