@@ -26,10 +26,10 @@ type ScrollContainerProps = {
 
 export const ScrollContainer = (props: ScrollContainerProps) => {
   return (
-    <>
+    <section>
       <Element name={props.name}>
         <Box
-          component="div"
+          component='div'
           className={styles['scroll-container']}
           sx={{ backgroundColor: props.bgColor ?? undefined }}
         >
@@ -49,7 +49,7 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
                 )}
                 <Box
                   className={styles['content-container-title-text']}
-                  component="h1"
+                  component='h1'
                   sx={{
                     fontFamily: 'Montserrat',
                     color: props.textColor ? props.textColor : 'app.gray.dark',
@@ -76,7 +76,7 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
               </Box>
               <Box
                 className={styles['content-container-subtitle']}
-                component="h2"
+                component='h2'
                 sx={{
                   fontFamily: 'OCR A',
                   color: props.textColor ? props.textColor : 'app.gray.dark',
@@ -101,6 +101,6 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
           </Box>
         </Box>
       </Element>
-    </>
+    </section>
   );
 };

@@ -78,6 +78,9 @@ export interface AppTranslations {
       text3: string;
     };
   };
+  career: {
+    title: string;
+  };
   skill: {
     title: string;
     frontend: string;

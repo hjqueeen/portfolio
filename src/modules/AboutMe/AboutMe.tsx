@@ -33,8 +33,8 @@ const AboutMe = (props: AboutMeProps) => {
   return (
     <ScrollContainer
       name={props.scrollTo}
-      bgColor='#dddddd'
       title={t('app.introduction.title')}
+      bgColor='#F5F5F5'
       textColor='app.purple'
       iconColor='#625E79'
       selectionColor='app.orange'

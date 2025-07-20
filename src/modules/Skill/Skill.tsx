@@ -24,32 +24,33 @@ const Skill = (props: SkillProps) => {
         'TypeScript',
         'Sass',
         'React',
+        'Next.js',
         'tailwind',
-        'Mui',
+        'Material UI',
         'Zustand',
       ],
     },
     {
       title: t('app.skill.backend'),
-      skills: ['NestJs', 'PostgresSQL', 'TypeOrm'],
+      skills: ['NestJS', 'PostgresSQL', 'TypeOrm'],
     },
     {
       title: t('app.skill.communication'),
-      skills: ['Jira Software', 'Adobe XD'],
+      skills: ['Jira Software', 'Adobe XD', 'Figma'],
     },
     {
       title: t('app.skill.version_control'),
-      skills: ['git', 'Github', 'GitLab'],
+      skills: ['git', 'GitHub', 'GitLab'],
     },
   ];
 
   return (
     <ScrollContainer
       name={props.scrollTo}
-      bgColor="app.purple"
+      bgColor='app.purple'
       title={t('app.skill.title')}
-      textColor="white"
-      iconColor="white"
+      textColor='white'
+      iconColor='white'
     >
       <Box className={styles['skill']}>
         <Box className={styles['skill-left']}>

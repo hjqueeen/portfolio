@@ -133,6 +133,9 @@ export const appTranslationsEN: AppTranslations = {
         'I am someone who takes responsibility and finds solutions even in the face of challenges.',
     },
   },
+  career: {
+    title: 'Career',
+  },
   skill: {
     title: 'SKILLS',
     frontend: 'Frontend',

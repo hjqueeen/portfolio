@@ -131,6 +131,9 @@ export const appTranslationsKO: AppTranslations = {
       text3: '어떤 어려움 앞에서도 책임감을 가지고 해결해나가는 사람입니다. ',
     },
   },
+  career: {
+    title: 'Career',
+  },
   skill: {
     title: 'SKILLS',
     frontend: 'Frontend',
