@@ -106,8 +106,8 @@ export const appTranslationsKO: AppTranslations = {
     },
   },
   intro: {
-    title: 'Hyejin Kim',
-    subtitle: 'Developer Portfolio',
+    title: '김혜진',
+    subtitle: '개발자 포트폴리오',
     description: '',
   },
   introduction: {

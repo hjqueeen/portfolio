@@ -13,14 +13,14 @@ export const TextCard = (props: TextCardProps) => {
   return (
     <Box className={styles['text-card']} sx={{ bgcolor: 'white' }}>
       <Box className={styles['text-card-title']}>
-        <SkillButton preset="orange" size="medium">
+        <SkillButton preset='brown' size='medium'>
           {props.title}
         </SkillButton>
       </Box>
       <Box className={styles['skill-items']}>
         {props.skills.map((skill, index) => (
           <Box key={index} className={styles['skill-items-button']}>
-            <SkillButton preset="white_purple">{skill}</SkillButton>
+            <SkillButton preset='white_purple'>{skill}</SkillButton>
           </Box>
         ))}
       </Box>

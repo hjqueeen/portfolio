@@ -13,7 +13,7 @@ declare module '@mui/material/styles' {
   }
   interface PaletteOptions {
     app: {
-      pink: string;
+      brown: string;
       purple: string;
       orange: string;
       gray: {
@@ -37,7 +37,7 @@ const breakpoints = {
   },
 };
 const app = {
-  pink: '#954C2E',
+  brown: '#954C2E',
   purple: '#131D4F',
   orange: '#FF7767',
   gray: {

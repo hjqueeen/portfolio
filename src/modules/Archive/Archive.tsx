@@ -37,11 +37,11 @@ const Archive = (props: ArchiveProps) => {
   return (
     <ScrollContainer
       name={props.scrollTo}
-      bgColor="black"
+      bgColor='black'
       title={t('app.archive.title')}
-      textColor="white"
-      iconColor="#625E79"
-      selectionColor="app.purple"
+      textColor='white'
+      iconColor='#625E79'
+      selectionColor='app.purple'
     >
       <Box className={styles['archive-container']}>
         <Box className={styles['archive']}>
@@ -49,7 +49,7 @@ const Archive = (props: ArchiveProps) => {
             <ImageCard
               key={index}
               titleImg={item.titleImg}
-              titleImgAlt="image_github"
+              titleImgAlt='image_github'
             >
               <Box
                 className={styles['archive-address']}
@@ -65,7 +65,7 @@ const Archive = (props: ArchiveProps) => {
               <Box
                 className={styles['archive-detail']}
                 sx={{
-                  color: 'app.pink',
+                  color: 'app.brown',
                   '::selection': {
                     color: 'white',
                     bgcolor: 'app.purple',
@@ -75,7 +75,7 @@ const Archive = (props: ArchiveProps) => {
                 {item.datail}
               </Box>
               <Box
-                component="ul"
+                component='ul'
                 className={styles['archive-detail-ul']}
                 sx={{
                   '::selection': {
@@ -85,7 +85,7 @@ const Archive = (props: ArchiveProps) => {
                 }}
               >
                 <Box
-                  component="li"
+                  component='li'
                   className={styles['archive-detail-li']}
                   sx={{
                     listStyleType: 'disc',
@@ -98,7 +98,7 @@ const Archive = (props: ArchiveProps) => {
                   {item.text1}
                 </Box>
                 <Box
-                  component="li"
+                  component='li'
                   className={styles['archive-detail-li']}
                   sx={{
                     listStyleType: 'disc',

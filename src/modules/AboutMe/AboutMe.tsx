@@ -37,19 +37,19 @@ const AboutMe = (props: AboutMeProps) => {
       bgColor='#F5F5F5'
       textColor='app.purple'
       iconColor='#625E79'
-      selectionColor='app.orange'
+      selectionColor='app.brown'
     >
       <Box className={styles['introduction-profile']}>
         <Box className={styles['introduction-profile-detail']}>
           <Box
             className='pt-8'
             sx={{
-              color: 'app.pink',
+              color: 'app.brown',
               fontSize: smDown ? '18px' : '25px',
               fontWeight: 700,
               '::selection': {
                 color: 'white',
-                bgcolor: 'app.orange',
+                bgcolor: 'app.brown',
               },
             }}
           >
@@ -64,7 +64,7 @@ const AboutMe = (props: AboutMeProps) => {
                 fontSize: smDown ? '12px' : '18px',
                 '::selection': {
                   color: 'white',
-                  bgcolor: 'app.orange',
+                  bgcolor: 'app.brown',
                 },
               }}
             >

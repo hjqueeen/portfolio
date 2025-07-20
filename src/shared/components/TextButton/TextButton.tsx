@@ -10,7 +10,7 @@ import styles from './TextButton.module.scss';
 type TextButtonProps = {
   children: DefaultTFuncReturn | string;
   classes?: string;
-  preset?: 'gray' | 'pink' | 'white_puple' | 'purple';
+  preset?: 'gray' | 'brown' | 'white_puple' | 'purple';
   size?: 'small' | 'base' | 'medium' | 'large';
   onClick?: () => void;
 };
@@ -35,13 +35,13 @@ export const TextButton = (props: TextButtonProps) => {
             },
           };
           break;
-        case 'pink':
+        case 'brown':
           sxPreset = {
             color: 'white',
-            bgcolor: 'app.pink',
+            bgcolor: 'app.brown',
             border: 'white 2px solid',
             '&:hover': {
-              color: 'app.pink',
+              color: 'app.brown',
               bgcolor: 'white',
             },
           };
@@ -100,7 +100,7 @@ export const TextButton = (props: TextButtonProps) => {
   return (
     <Button
       className={clsx(styles['textbutton'], props.classes)}
-      variant="text"
+      variant='text'
       sx={{ ...sx }}
       onClick={props.onClick}
     >

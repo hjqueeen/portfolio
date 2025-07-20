@@ -19,22 +19,22 @@ type IntroProps = {
 const Intro = (props: IntroProps) => {
   const { t } = useTranslation();
   return (
-    <Box className="relative">
+    <Box className='relative'>
       <ScrollContainer
         name={props.scrollTo}
-        bgColor="app.purple"
+        bgColor='app.purple'
         // bgImage={bakgroundImg}
-        textColor="white"
+        textColor='white'
         title={t('app.intro.title')}
         subtitle={t('app.intro.subtitle')}
         disableIcon
         disableTitleUnderline
       >
         <Box
-          component="img"
+          component='img'
           className={styles['intro-image']}
           src={developer}
-          alt="developer"
+          alt='developer'
           sx={{
             '::selection': {
               color: 'white',
@@ -44,14 +44,14 @@ const Intro = (props: IntroProps) => {
         />
         <Box className={styles['intro-text-button']}>
           <Link
-            to="AboutMe"
+            to='AboutMe'
             spy={true}
             smooth={true}
             duration={500}
             offset={-64}
           >
-            <TextButton size="medium" preset="pink">
-              Learn more
+            <TextButton size='medium' preset='brown'>
+              더보기
             </TextButton>
           </Link>
         </Box>

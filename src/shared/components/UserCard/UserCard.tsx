@@ -34,7 +34,7 @@ export const UserCard = (props: UserCardProps) => {
           sx={{
             '::selection': {
               color: 'white',
-              bgcolor: 'app.orange',
+              bgcolor: 'app.brown',
             },
           }}
         >
@@ -45,7 +45,7 @@ export const UserCard = (props: UserCardProps) => {
           sx={{
             '::selection': {
               color: 'white',
-              bgcolor: 'app.orange',
+              bgcolor: 'app.brown',
             },
           }}
         >
@@ -57,7 +57,7 @@ export const UserCard = (props: UserCardProps) => {
             sx={{
               '::selection': {
                 color: 'white',
-                bgcolor: 'app.orange',
+                bgcolor: 'app.brown',
               },
             }}
           >

@@ -147,11 +147,11 @@ const Project = (props: ProjectProps) => {
   return (
     <ScrollContainer
       name={props.scrollTo}
-      bgColor="app.purple"
+      bgColor='app.purple'
       title={t('app.project.title')}
-      textColor="white"
-      iconColor="white"
-      classes="gap-10"
+      textColor='white'
+      iconColor='white'
+      classes='gap-10'
     >
       {project_items.map((item, index) => (
         <Box
@@ -166,7 +166,7 @@ const Project = (props: ProjectProps) => {
                 fontFamily: 'Montserrat',
                 '::selection': {
                   color: 'white',
-                  bgcolor: 'app.orange',
+                  bgcolor: 'app.brown',
                 },
               }}
             >
@@ -178,7 +178,7 @@ const Project = (props: ProjectProps) => {
                 color: 'app.gray.light',
                 '::selection': {
                   color: 'white',
-                  bgcolor: 'app.orange',
+                  bgcolor: 'app.brown',
                 },
               }}
             >
@@ -188,7 +188,7 @@ const Project = (props: ProjectProps) => {
           <Box className={styles['content']}>
             <Box className={styles['content-slider']}>
               <Box
-                component="img"
+                component='img'
                 className={styles['content-image']}
                 sx={{
                   '::selection': {
@@ -209,7 +209,7 @@ const Project = (props: ProjectProps) => {
                     sx={{
                       '::selection': {
                         color: 'white',
-                        bgcolor: 'app.orange',
+                        bgcolor: 'app.brown',
                       },
                     }}
                   >
@@ -218,8 +218,8 @@ const Project = (props: ProjectProps) => {
                 ))}
               </Box>
               <Box className={styles['content-main-description-button']}>
-                <TextButton preset="pink" size={smDown ? 'small' : 'medium'}>
-                  Learn more
+                <TextButton preset='brown' size={smDown ? 'small' : 'medium'}>
+                  더보기
                 </TextButton>
                 <Box
                   className={styles['content-main-description-divider']}
@@ -235,7 +235,7 @@ const Project = (props: ProjectProps) => {
                       sx={{
                         '::selection': {
                           color: 'white',
-                          bgcolor: 'app.orange',
+                          bgcolor: 'app.brown',
                         },
                       }}
                     >
@@ -253,7 +253,7 @@ const Project = (props: ProjectProps) => {
                         sx={{
                           '::selection': {
                             color: 'white',
-                            bgcolor: 'app.orange',
+                            bgcolor: 'app.brown',
                           },
                         }}
                       >
@@ -264,18 +264,18 @@ const Project = (props: ProjectProps) => {
                       className={styles['content-main-description-list-detail']}
                       sx={{
                         textDecoration: list.link ? 'underline' : undefined,
-                        color: list.link ? 'app.pink' : undefined,
+                        color: list.link ? 'app.brown' : undefined,
                         '::selection': {
                           color: 'white',
-                          bgcolor: 'app.orange',
+                          bgcolor: 'app.brown',
                         },
                       }}
                     >
                       {list.link && (
                         <a
                           href={list.detail?.toString()}
-                          target="_blank"
-                          rel="noreferrer"
+                          target='_blank'
+                          rel='noreferrer'
                         >
                           {list.detail}
                         </a>

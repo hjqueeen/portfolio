@@ -64,7 +64,7 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
                       : '#5B6A7B',
                     textDecorationThickness: '1px',
                     '::selection': {
-                      color: props.selectionColor ? 'white' : 'app.pink',
+                      color: props.selectionColor ? 'white' : 'app.brown',
                       bgcolor: props.selectionColor
                         ? props.selectionColor
                         : 'white',
@@ -81,7 +81,7 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
                   fontFamily: 'OCR A',
                   color: props.textColor ? props.textColor : 'app.gray.dark',
                   '::selection': {
-                    color: props.selectionColor ? 'white' : 'app.pink',
+                    color: props.selectionColor ? 'white' : 'app.brown',
                     bgcolor: props.selectionColor
                       ? props.selectionColor
                       : 'white',

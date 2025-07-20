@@ -10,7 +10,7 @@ import styles from './SkillButton.module.scss';
 type SkillButtonProps = {
   children: DefaultTFuncReturn | string;
   classes?: string;
-  preset?: 'gray' | 'pink' | 'white_purple' | 'purple' | 'orange';
+  preset?: 'gray' | 'brown' | 'white_purple' | 'purple' | 'orange';
   fontFamily?: 'OCR A';
   size?: 'small' | 'medium' | 'large';
   onClick?: () => void;
@@ -35,13 +35,13 @@ export const SkillButton = (props: SkillButtonProps) => {
             },
           };
           break;
-        case 'pink':
+        case 'brown':
           sxPreset = {
             color: 'white',
-            bgcolor: 'app.pink',
+            bgcolor: 'app.brown',
             border: 'white 2px solid',
             '&:hover': {
-              color: 'app.pink',
+              color: 'app.brown',
               bgcolor: 'white',
             },
           };
@@ -111,7 +111,7 @@ export const SkillButton = (props: SkillButtonProps) => {
   return (
     <Button
       className={clsx(styles['skillbutton'], props.classes)}
-      variant="text"
+      variant='text'
       sx={{ ...sx }}
       onClick={props.onClick}
     >

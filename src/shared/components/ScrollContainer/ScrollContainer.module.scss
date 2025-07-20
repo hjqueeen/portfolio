@@ -9,7 +9,7 @@
 
 .scroll {
   &-container {
-    @apply flex w-full h-fit;
+    @apply flex w-full h-fit items-center;
     min-height: calc(100vh - 64px);
   }
 }
@@ -32,8 +32,8 @@
     }
   }
   &-subtitle {
-    @apply ml-2 font-normal text-base
-    sm:text-xl lg:text-2xl;
+    @apply mt-2 ml-2 font-semibold text-xl tracking-widest
+    sm:text-2xl lg:text-3xl;
   }
   &-icon {
     color: 'app.gray.light';
