@@ -41,7 +41,7 @@ const Career = (props: CareerProps) => {
       selectionColor='app.purple'
     >
       <Box
-        className='flex flex-row h-full bg-white shadow-lg rounded-2xl border-solid border border-gray-200 p-8 pt-2 mt-4 w-4/5 mx-auto space-y-6 gap-2'
+        className='flex flex-col md:flex-row h-full bg-white shadow-lg rounded-2xl border-solid border border-gray-200 p-8 pt-2 mt-4 w-4/5 mx-auto space-y-6 gap-2'
         sx={{
           '::selection': {
             color: 'white',
@@ -49,8 +49,8 @@ const Career = (props: CareerProps) => {
           },
         }}
       >
-        <div className='flex flex-col w-52 border-0 border-solid border-r border-gray-200 p-2 pr-6 gap-2'>
-          <img className='mt-4' src={pengueen} alt='pengueen-logo' />
+        <div className='flex flex-col items-center w-full md:w-52 border-0 border-solid border-b border-r-0 md:border-r md:border-b-0 border-gray-200 p-2 pr-0 md:pr-6 gap-2'>
+          <img className='mt-4 w-52' src={pengueen} alt='pengueen-logo' />
           <a
             href='https://www.pengueen.de/'
             className='text-xs cursor-pointer underline'
@@ -114,7 +114,7 @@ const Career = (props: CareerProps) => {
         </div>
       </Box>
       <Box
-        className='flex flex-row h-full bg-white shadow-lg rounded-2xl border-solid border border-gray-200 p-8 pt-2 mt-4 w-4/5 mx-auto space-y-6 gap-2'
+        className='flex flex-col md:flex-row h-full bg-white shadow-lg rounded-2xl border-solid border border-gray-200 p-8 pt-2 mt-4 w-4/5 mx-auto space-y-6 gap-2'
         sx={{
           '::selection': {
             color: 'white',
@@ -122,8 +122,8 @@ const Career = (props: CareerProps) => {
           },
         }}
       >
-        <div className='flex flex-col w-52 border-0 border-solid border-r border-gray-200 p-2 pr-6 gap-2'>
-          <img className='mt-4' src={alstom_logo} alt='alstom-logo' />
+        <div className='flex flex-col items-center w-full md:w-52 border-0 border-solid border-b border-r-0 md:border-r md:border-b-0 border-gray-200 p-2 pr-0 md:pr-6 gap-2'>
+          <img className='mt-4 w-52' src={alstom_logo} alt='alstom-logo' />
           <a
             href='https://www.alstom.com/'
             className='text-xs cursor-pointer underline'
@@ -141,13 +141,13 @@ const Career = (props: CareerProps) => {
               제작합니다.
             </h2>
             <p className='text-sm text-gray-500 mt-1'>
-              근무 기간: 2023년 10월 ~ 현재
+              근무 기간: 2023년 10월 ~ 현재 (인턴)
             </p>
             <p className='text-sm text-gray-500'>
               부서: 여객 정보 시스템(PIS, Passenger Information System)
             </p>
             <p className='text-sm text-gray-500'>
-              역할: 소프트웨어 인턴 (PIS 시스템 개발 및 유지보수 지원)
+              역할: 소프트웨어 개발 (PIS 시스템 개발 및 유지보수 지원)
             </p>
           </div>
 
