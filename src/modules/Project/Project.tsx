@@ -219,7 +219,7 @@ const Project = (props: ProjectProps) => {
               </Box>
               <Box className={styles['content-main-description-button']}>
                 <TextButton preset='brown' size={smDown ? 'small' : 'medium'}>
-                  더보기
+                  {t('app.common.readMore')}
                 </TextButton>
                 <Box
                   className={styles['content-main-description-divider']}

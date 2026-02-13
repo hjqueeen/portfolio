@@ -31,7 +31,8 @@ i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
     resources,
-    fallbackLng: ['ko', 'en'],
+    lng: 'en',
+    fallbackLng: ['en', 'ko'],
     debug: true,
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default

@@ -10,11 +10,10 @@ import { ThemeProvider } from '@mui/material';
 import { useTheme } from './shared/hooks/use-theme.hook';
 
 // Utils
-import i18n from './shared/utils/i18n';
 import { useTranslation } from 'react-i18next';
 
 function App() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { activeThemeGet } = useTheme();
 
   // Set document title on application init
@@ -22,18 +21,11 @@ function App() {
     document.title = t('app.title');
   }, [t]);
 
-  // Set language on account data change. Defaults to 'en'.
+  // Sync document lang attribute with current i18n language
   useEffect(() => {
-    // if (window.navigator.language.includes('ko')) {
-    //   console.log('ko');
-    //   i18n.changeLanguage('ko');
-    //   document.documentElement.setAttribute('lang', 'ko');
-    // } else {
-    console.log('ko');
-    i18n.changeLanguage('ko');
-    document.documentElement.setAttribute('lang', 'ko');
-    // }
-  }, []);
+    const lng = i18n.language?.startsWith('ko') ? 'ko' : 'en';
+    document.documentElement.setAttribute('lang', lng);
+  }, [i18n.language]);
 
   useEffect(() => {
     setTimeout(() => {

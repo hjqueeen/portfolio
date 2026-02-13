@@ -51,7 +51,7 @@ const Intro = (props: IntroProps) => {
             offset={-64}
           >
             <TextButton size='medium' preset='brown'>
-              더보기
+              {t('app.common.readMore')}
             </TextButton>
           </Link>
         </Box>

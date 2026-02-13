@@ -80,6 +80,31 @@ export interface AppTranslations {
   };
   career: {
     title: string;
+    pengueen: {
+      companyDescription: string;
+      period: string;
+      role: string;
+      mainTasksTitle: string;
+      tasks: { title: string; detail: string }[];
+    };
+    alstom: {
+      companyDescription: string;
+      period: string;
+      department: string;
+      role: string;
+      mainTasksTitle: string;
+      tasks: { title: string; detail: string }[];
+    };
+  };
+  common: {
+    readMore: string;
+  };
+  nav: {
+    aboutMe: string;
+    career: string;
+    skills: string;
+    archiving: string;
+    projects: string;
   };
   skill: {
     title: string;

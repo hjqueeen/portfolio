@@ -133,6 +133,67 @@ export const appTranslationsKO: AppTranslations = {
   },
   career: {
     title: 'Career',
+    pengueen: {
+      companyDescription:
+        'Pengueen은 조직의 업무 프로세스를 유연하게 디지털화하고, 협업을 효율적으로 지원하는 플랫폼을 개발, 제공하는 회사입니다.',
+      period: '근무 기간: 2022년 8월 ~ 현재 (파트타임)',
+      role: '역할: 풀스택 개발자 (Frontend 중심 + Backend 일부 참여)',
+      mainTasksTitle: '✔️ 주요 업무 및 성과',
+      tasks: [
+        {
+          title: '홈페이지 성능 개선 및 유지보수:',
+          detail:
+            'React 구조 최적화 및 코드 스플리팅을 통해 페이지 로딩 속도 약 30% 개선',
+        },
+        {
+          title: '사용자 피드백 기반 기능 개발:',
+          detail: '게시판, 즐겨찾기, 검색 필터 등 신규 기능 기획 및 구현',
+        },
+        {
+          title: '버그 및 이슈 해결: ',
+          detail: '운영 중 발생한 다양한 UI/UX 이슈 해결 및 품질 안정화',
+        },
+        {
+          title: '백엔드 연동 및 개발: ',
+          detail:
+            'NestJS + TypeORM 기반 간단한 CRUD API 개발 및 PostgreSQL 쿼리 작성',
+        },
+        {
+          title: '협업과 관리: ',
+          detail: 'Git, Jira을 통한 이슈 관리 및 팀 간 협업 경험',
+        },
+      ],
+    },
+    alstom: {
+      companyDescription:
+        'Alstom은 프랑스에 본사를 둔 세계적인 철도 제조 기업으로, 고속열차, 지하철, 트램 등 다양한 열차와 관련 시스템을 설계하고 제작합니다.',
+      period: '근무 기간: 2023년 10월 ~ 현재 (인턴)',
+      department: '부서: 여객 정보 시스템(PIS, Passenger Information System)',
+      role: '역할: 소프트웨어 개발 (PIS 시스템 개발 및 유지보수 지원)',
+      mainTasksTitle: '✔️ 주요 업무 및 경험',
+      tasks: [
+        {
+          title: 'PIS 소프트웨어 유지보수 및 테스트 자동화:',
+          detail:
+            '기존 시스템 코드 분석 및 오류 수정, 테스트 케이스 개선 및 자동화 스크립트 작성',
+        },
+        {
+          title: '프론트엔드 인터페이스 검토 및 개선 제안:',
+          detail:
+            '승객 정보 디스플레이 UI 구성 및 레이아웃 정렬 등 사용자 경험 향상 작업 참여',
+        },
+      ],
+    },
+  },
+  common: {
+    readMore: '더보기',
+  },
+  nav: {
+    aboutMe: '소개',
+    career: '경력',
+    skills: '기술',
+    archiving: '아카이빙',
+    projects: '프로젝트',
   },
   skill: {
     title: 'SKILLS',

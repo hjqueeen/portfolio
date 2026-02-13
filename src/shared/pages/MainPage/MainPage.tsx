@@ -11,6 +11,7 @@ import clsx from 'clsx';
 import Intro from '../../../modules/Intro/Intro';
 import AboutMe from '../../../modules/AboutMe/AboutMe';
 import ScrollLink from '../../components/ScrollLink/ScrollLink';
+import LanguageSwitcher from '../../components/LanguageSwitcher/LanguageSwitcher';
 import Skill from '../../../modules/Skill/Skill';
 import Archive from '../../../modules/Archive/Archive';
 // import Career from '../../../modules/Career/Career';
@@ -83,12 +84,12 @@ const MainPage = (props: MainPageProps) => {
                   // , styles['show']
                 )}
               >
-                <ScrollLink to='AboutMe'>About me</ScrollLink>
-                <ScrollLink to='Career'>Career</ScrollLink>
-                <ScrollLink to='skill'>Skills</ScrollLink>
-                <ScrollLink to='Archive'>Archiving</ScrollLink>
-                <ScrollLink to='project'>Projects</ScrollLink>
-                {/* <ScrollLink to="career">Career</ScrollLink> */}
+                <ScrollLink to='AboutMe'>{t('app.nav.aboutMe')}</ScrollLink>
+                <ScrollLink to='Career'>{t('app.nav.career')}</ScrollLink>
+                <ScrollLink to='skill'>{t('app.nav.skills')}</ScrollLink>
+                <ScrollLink to='Archive'>{t('app.nav.archiving')}</ScrollLink>
+                <ScrollLink to='project'>{t('app.nav.projects')}</ScrollLink>
+                <LanguageSwitcher />
               </Box>
             )}
           </>

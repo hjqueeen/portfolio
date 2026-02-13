@@ -36,9 +36,9 @@ export const appTranslationsEN: AppTranslations = {
     },
   },
   project2: {
-    title: '출고 관리 프로그램 개발',
+    title: 'Shipping Management Program Development',
     subtitle:
-      '기존에 표준 없이 여러 곳에 분산되어 있던 출고 관련 데이터를 중앙에서 통합 관리하고, 반복적이고 수동으로 처리되던 업무를 자동화하여 업무 효율성을 극대화하기 위해 출고 관리 프로그램을 개발했습니다.',
+      'Developed an integrated shipping management system that centralizes previously dispersed data and automates repetitive manual tasks to maximize efficiency and accuracy.',
     descriptions: {
       text1: '',
       text2: '',
@@ -106,7 +106,7 @@ export const appTranslationsEN: AppTranslations = {
     },
   },
   intro: {
-    title: 'Hyejin Kim',
+    title: 'HYEJIN KIM',
     subtitle: 'Web Developer Portfolio',
     description: '',
   },
@@ -135,6 +135,69 @@ export const appTranslationsEN: AppTranslations = {
   },
   career: {
     title: 'Career',
+    pengueen: {
+      companyDescription:
+        'Pengueen develops and provides platforms that flexibly digitize organizational workflows and support efficient collaboration.',
+      period: 'Aug 2022 – Present (Part-time)',
+      role: 'Full-stack Developer (Frontend-focused, partial Backend)',
+      mainTasksTitle: '✔️ Key responsibilities and achievements',
+      tasks: [
+        {
+          title: 'Website performance improvement and maintenance:',
+          detail:
+            'Improved page load speed by ~30% through React structure optimization and code splitting.',
+        },
+        {
+          title: 'User feedback-driven feature development:',
+          detail:
+            'Planned and implemented new features including bulletin board, favorites, and search filters.',
+        },
+        {
+          title: 'Bug and issue resolution: ',
+          detail:
+            'Resolved various UI/UX issues in production and stabilized quality.',
+        },
+        {
+          title: 'Backend integration and development: ',
+          detail:
+            'Developed simple CRUD APIs with NestJS + TypeORM and wrote PostgreSQL queries.',
+        },
+        {
+          title: 'Collaboration and management: ',
+          detail: 'Issue management and team collaboration using Git and Jira.',
+        },
+      ],
+    },
+    alstom: {
+      companyDescription:
+        'Alstom is a global rail manufacturer headquartered in France, designing and producing trains and related systems including high-speed rail, metro, and tram.',
+      period: 'Oct 2023 – Present (Intern)',
+      department: 'Passenger Information System (PIS)',
+      role: 'Software development (PIS system development and maintenance support)',
+      mainTasksTitle: '✔️ Key responsibilities and experience',
+      tasks: [
+        {
+          title: 'PIS software maintenance and test automation:',
+          detail:
+            'Analyzed existing system code, fixed defects, improved test cases, and wrote automation scripts.',
+        },
+        {
+          title: 'Frontend interface review and improvement proposals:',
+          detail:
+            'Contributed to passenger information display UI and layout alignment for better user experience.',
+        },
+      ],
+    },
+  },
+  common: {
+    readMore: 'Read more',
+  },
+  nav: {
+    aboutMe: 'About me',
+    career: 'Career',
+    skills: 'Skills',
+    archiving: 'Archiving',
+    projects: 'Projects',
   },
   skill: {
     title: 'SKILLS',
