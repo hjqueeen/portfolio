@@ -38,11 +38,12 @@ export const appTranslationsEN: AppTranslations = {
   project2: {
     title: 'Shipping Management Program Development',
     subtitle:
-      'Developed an integrated shipping management system that centralizes previously dispersed data and automates repetitive manual tasks to maximize efficiency and accuracy.',
+      'Development of an integrated shipping management system that standardizes and automates data to improve management efficiency and accuracy.',
     descriptions: {
-      text1: '',
-      text2: '',
-      text3: '',
+      text1:
+        'I developed this shipping management program to centralize shipping-related data that had been scattered across multiple sources, and to automate repetitive manual tasks in order to maximize operational efficiency.',
+      text2: 'Reduce human error and improve productivity through automation of repetitive tasks',
+      text3: 'Provide an intuitive interface that anyone can use easily',
       text4: '',
       text5: '',
       text6: '',
@@ -50,35 +51,33 @@ export const appTranslationsEN: AppTranslations = {
     list1: {
       title: 'Development Goals',
       detail:
-        'Establish a standardized and consistent data management system, automate repetitive tasks to reduce human error and increase productivity, and provide an intuitive interface that anyone can use easily.',
+        'Build a standardized, consistent data management system; reduce human error and improve productivity by automating repetitive tasks; and provide an intuitive interface that anyone can use easily.',
     },
     list2: {
-      title: 'Database Construction',
+      title: 'Main Features',
       detail:
-        'Organize and structure accumulated shipping data from the past 5 years into a comprehensive database.',
+        'Database construction, data search and filtering, barcode processing, inspection sheet printing and storage, automatic notifications, shipping status statistics',
     },
     list3: {
-      title: 'Search and Filtering',
+      title: 'Tech Stack',
       detail:
-        'Enable data retrieval and filtering based on various conditions.',
+        'Figma, React, TypeScript, Tailwind CSS, NestJS, TypeORM, PostgreSQL',
     },
     list4: {
-      title: 'Barcode Processing',
-      detail:
-        'Replace manual input methods with barcode recognition to improve processing speed and accuracy.',
+      title: 'Design Draft',
+      detail: 'http://bit.ly/4kqY1ks',
     },
     list5: {
-      title: 'Inspection Sheet Management',
-      detail: 'Provide functionality to print and store inspection sheets.',
+      title: 'Frontend Code',
+      detail: 'https://github.com/hjqueeen/mycu_frontend',
     },
     list6: {
-      title: 'Automatic Notifications',
-      detail:
-        'Automatically send alerts when it is time for product upgrades or replacements.',
+      title: 'Backend Code',
+      detail: 'https://github.com/hjqueeen/mycu_backend',
     },
     list7: {
       title: 'Shipping Status Statistics',
-      detail: 'Visualize shipping status statistics by period and product.',
+      detail: 'Provide statistics by visualizing shipping status by period and by product.',
     },
   },
   project3: {
