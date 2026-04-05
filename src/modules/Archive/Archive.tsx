@@ -54,7 +54,21 @@ const Archive = (props: ArchiveProps) => {
       <Box className={styles['archive-container']}>
         <Box className={styles['archive']}>
           {archive_item.map((item, index) => (
-            <Box className={styles['img-card']} sx={{ bgcolor: 'white' }}>
+            <Box
+              key={index}
+              component='a'
+              href={item.address}
+              target='_blank'
+              rel='noopener noreferrer'
+              className={styles['img-card']}
+              sx={{
+                bgcolor: 'white',
+                display: 'block',
+                textDecoration: 'none',
+                color: 'inherit',
+                cursor: 'pointer',
+              }}
+            >
               <Box className={styles['img-card-title']}>
                 <Box
                   component='img'
